@@ -23,6 +23,13 @@ export default function FloatingReaderToolbar({
   const { theme, setTheme } = useTheme();
   const [isVisible, setIsVisible] = useState(true);
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const activeTheme = mounted ? theme : "sepia";
 
   // Load config from Local Storage on mount
   useEffect(() => {
@@ -151,7 +158,7 @@ export default function FloatingReaderToolbar({
           <button
             onClick={() => changeTheme("light")}
             className={`w-7 h-7 rounded-full bg-white border flex items-center justify-center cursor-pointer hover:scale-105 duration-200 ${
-              theme === "light"
+              activeTheme === "light"
                 ? "border-orange-600 dark:border-orange-500 ring-2 ring-orange-500/20"
                 : "border-slate-200 dark:border-zinc-850"
             }`}
@@ -160,7 +167,7 @@ export default function FloatingReaderToolbar({
           <button
             onClick={() => changeTheme("sepia")}
             className={`w-7 h-7 rounded-full bg-[#FAF7F2] border flex items-center justify-center cursor-pointer hover:scale-105 duration-200 ${
-              theme === "sepia"
+              activeTheme === "sepia"
                 ? "border-orange-600 dark:border-orange-500 ring-2 ring-orange-500/20"
                 : "border-slate-200 dark:border-zinc-850"
             }`}
@@ -169,7 +176,7 @@ export default function FloatingReaderToolbar({
           <button
             onClick={() => changeTheme("dark")}
             className={`w-7 h-7 rounded-full bg-[#18181B] border flex items-center justify-center cursor-pointer hover:scale-105 duration-200 ${
-              theme === "dark"
+              activeTheme === "dark"
                 ? "border-orange-600 dark:border-orange-500 ring-2 ring-orange-500/20"
                 : "border-slate-200 dark:border-zinc-850"
             }`}

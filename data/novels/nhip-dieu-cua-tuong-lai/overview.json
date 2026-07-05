@@ -1,0 +1,30 @@
+{
+  "id": "2",
+  "title": "Nhịp Điệu Của Tương Lai",
+  "slug": "nhip-dieu-cua-tuong-lai",
+  "author": "AI Songsmith",
+  "synopsis": "Trong thế giới nơi âm nhạc được tạo ra hoàn toàn bởi thuật toán AI siêu việt, một nhóm nhạc sĩ tự do đi tìm lại âm điệu thô mộc của con người.",
+  "coverUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAA5-qroVGDN8nOhcVHjMShJ43kJxmZILybJW5si-j7WpL-OWCpp71QXlEpFTIpithn8vGgd7mm7qxrzOIkFXDRtztvtbysBBFZn5TqYAaKUB-ppuJ9y7Ig_zhfYrO4Xda4RcU6e_AQZhjEcj19m9-3JrDGKb3jHpQPou0tCZpiLHOm_a-x-XksZ3cM6SDnySEqwovseBPhOAp5S4cyTolOW1QepJyyOeAThpricir1oQxQTAN1JIOP",
+  "stats": {
+    "views": "850k",
+    "nominations": "3.1k",
+    "followers": "1.8k",
+    "rating": 9.2
+  },
+  "status": "Ongoing",
+  "type": "Free",
+  "genres": [
+    "Drama",
+    "Sci-Fi",
+    "Modern Romance"
+  ],
+  "chapters": [
+    {
+      "id": "1",
+      "title": "Tiếng đàn câm lặng",
+      "slug": "chuong-1-tieng-dan-cam-lang",
+      "timeAgo": "1 ngày trước",
+      "isLocked": false
+    }
+  ]
+}

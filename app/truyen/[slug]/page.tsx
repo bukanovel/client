@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChapterListFilter from "@/components/ChapterListFilter";
-import novelsData from "@/data/novels.json";
+import NovelActionButtons from "@/components/NovelActionButtons";
+import { getAllNovels, getNovelBySlug } from "@/lib/novels";
 
 interface Props {
   params: Promise<{
@@ -14,6 +15,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
+  const novelsData = getAllNovels();
   return novelsData.map((novel) => ({
     slug: novel.slug,
   }));
@@ -21,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const novel = novelsData.find((n) => n.slug === slug);
+  const novel = getNovelBySlug(slug);
   if (!novel) return {};
 
   return {
@@ -32,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function NovelDetailPage({ params }: Props) {
   const { slug } = await params;
-  const novel = novelsData.find((n) => n.slug === slug);
+  const novel = getNovelBySlug(slug);
   if (!novel) notFound();
 
   return (
@@ -94,13 +96,10 @@ export default async function NovelDetailPage({ params }: Props) {
 
               {/* Main CTA */}
               <div className="md:pb-2 w-full md:w-auto">
-                <Link
-                  href={`/truyen/${novel.slug}/${novel.chapters[0]?.slug}`}
-                  className="w-full md:w-auto px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 duration-200"
-                >
-                  <span className="material-symbols-outlined text-sm">auto_stories</span>
-                  Đọc từ đầu nhen 🚀
-                </Link>
+                <NovelActionButtons
+                  novelSlug={novel.slug}
+                  firstChapterSlug={novel.chapters[0]?.slug}
+                />
               </div>
             </div>
           </div>

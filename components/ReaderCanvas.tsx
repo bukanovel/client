@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import FloatingReaderToolbar from "@/components/FloatingReaderToolbar";
 import AdBanner from "@/components/ads/AdBanner";
@@ -23,6 +23,21 @@ export default function ReaderCanvas({
   const [fontSize, setFontSize] = useState(20);
   const [, setTheme] = useState<"light" | "sepia" | "dark">("sepia");
   const [fontFamily, setFontFamily] = useState<"serif" | "sans">("serif");
+
+  useEffect(() => {
+    try {
+      const historyStr = localStorage.getItem("bukanovel-reading-history");
+      const history = historyStr ? JSON.parse(historyStr) : {};
+      history[novel.slug] = {
+        chapterSlug: chapter.slug,
+        chapterTitle: chapter.title,
+        updatedAt: new Date().toISOString(),
+      };
+      localStorage.setItem("bukanovel-reading-history", JSON.stringify(history));
+    } catch (e) {
+      console.error("Failed to save reading history:", e);
+    }
+  }, [novel.slug, chapter.slug, chapter.title]);
 
   return (
     <div className="flex-1 w-full flex flex-col items-center">

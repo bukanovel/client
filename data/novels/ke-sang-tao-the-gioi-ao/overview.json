@@ -1,0 +1,38 @@
+{
+  "id": "1",
+  "title": "Kẻ Sáng Tạo Thế Giới Ảo",
+  "slug": "ke-sang-tao-the-gioi-ao",
+  "author": "AI Writer",
+  "synopsis": "Một lập trình viên trẻ vô tình phát hiện ra dòng code bí ẩn có khả năng thay đổi thế giới thực. Nhưng liệu anh ta đang làm chủ công nghệ hay chỉ là con cờ trong một trò chơi quy mô vũ trụ?",
+  "coverUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSDj1jX6kGebdjd9Qlg5H2SjBU8BDI8OVDQ_f0MxqMhTs1ofjNBWYVJYGqyoqfr6IaTn64cFN5fE7RpqMgV7z-fE25TqgxcMvy85JZEk9FESduT0uJAdtGImNiL24jINuxSxeZggEhoA2GBIstT4A0LN6V-U91Je4mlRprSpYhUvLPbokYDbd1EvGr2qL8KmuabR1Nk1_BicqWjK2HVKKcJtNxPo2H3AYxikEukrOu32FSgH4yFOhP",
+  "stats": {
+    "views": "1.2M",
+    "nominations": "4.8k",
+    "followers": "2.4k",
+    "rating": 9.5
+  },
+  "status": "Ongoing",
+  "type": "Free",
+  "genres": [
+    "Sci-Fi",
+    "Huyền Huyễn",
+    "Dị Năng",
+    "Hệ Thống"
+  ],
+  "chapters": [
+    {
+      "id": "1",
+      "title": "Dòng code lúc nửa đêm",
+      "slug": "chuong-1-dong-code-luc-nua-dem",
+      "timeAgo": "2 giờ trước",
+      "isLocked": false
+    },
+    {
+      "id": "2",
+      "title": "Hiện thực bị bẻ cong",
+      "slug": "chuong-2-hien-thuc-bi-be-cong",
+      "timeAgo": "12 giờ trước",
+      "isLocked": false
+    }
+  ]
+}

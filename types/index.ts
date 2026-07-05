@@ -21,7 +21,7 @@ export interface Chapter {
   id: string;
   title: string;
   slug: string;
-  content: string;
+  content?: string;
   timeAgo?: string;
   isLocked?: boolean;
 }

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import novelsData from "@/data/novels.json";
+import { getAllNovels } from "@/lib/novels";
 
 export const metadata: Metadata = {
   title: "Danh sách tiểu thuyết AI - Bukanovel",
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function NovelsCatalogPage() {
+  const novelsData = getAllNovels();
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between transition-colors duration-200">
       <Header />

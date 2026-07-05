@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import novelsData from "@/data/novels.json";
+import { getAllNovels } from "@/lib/novels";
 
 export const metadata: Metadata = {
   title: "Bukanovel - AI-Driven Light Novels",
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function LandingPortalPage() {
+  const novelsData = getAllNovels();
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between transition-colors duration-200">
       {/* Header */}
