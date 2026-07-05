@@ -8,7 +8,7 @@ import { BookOpen, Minus, Plus, Type, ArrowUp } from "lucide-react";
 interface Props {
   novelSlug: string;
   onFontSizeChange: (size: number) => void;
-  onThemeChange: (theme: "light" | "sepia" | "dark") => void;
+  onThemeChange: (theme: "light" | "dark") => void;
   fontFamily: "serif" | "sans";
   onFontFamilyChange: (font: "serif" | "sans") => void;
 }
@@ -33,7 +33,7 @@ export default function FloatingReaderToolbar({
     return () => clearTimeout(timer);
   }, []);
 
-  const activeTheme = mounted ? theme : "sepia";
+  const activeTheme = mounted ? theme : "light";
 
   // Load config from Local Storage on mount
   useEffect(() => {
@@ -91,7 +91,7 @@ export default function FloatingReaderToolbar({
     updateConfig(nextSize, fontFamily);
   };
 
-  const changeTheme = (nextTheme: "light" | "sepia" | "dark") => {
+  const changeTheme = (nextTheme: "light" | "dark") => {
     setTheme(nextTheme);
     onThemeChange(nextTheme);
   };
@@ -104,64 +104,65 @@ export default function FloatingReaderToolbar({
 
   return (
     <div
-      className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
+      className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 max-w-[95vw] ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0 pointer-events-none"
       }`}
     >
-      <div className="flex items-center gap-2 p-2 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border border-slate-200 dark:border-zinc-800 rounded-full shadow-lg">
+      <div className="flex items-center gap-1 sm:gap-2 p-1.5 sm:p-2 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border border-slate-200 dark:border-zinc-800 rounded-full shadow-lg overflow-x-auto scrollbar-none">
         {/* TOC Button */}
         <button
           onClick={() => router.push(`/truyen/${novelSlug}`)}
-          className="p-3 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
+          className="p-2 sm:p-3 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer shrink-0"
           title="Mục lục"
         >
-          <BookOpen className="w-5 h-5" />
+          <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
-        <div className="w-px h-6 bg-slate-200 dark:bg-zinc-850 mx-1"></div>
+        <div className="w-px h-5 sm:h-6 bg-slate-200 dark:bg-zinc-850 mx-0.5 sm:mx-1 shrink-0"></div>
 
         {/* Font Controls */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5 sm:gap-1 shrink-0">
           <button
             onClick={() => changeFontSize(-1)}
-            className="p-2 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
+            className="p-1.5 sm:p-2 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
             title="Giảm cỡ chữ"
           >
-            <Minus className="w-4 h-4" />
+            <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </button>
-          <span className="w-8 text-center text-xs font-bold text-slate-700 dark:text-zinc-300 select-none">
+          <span className="w-6 sm:w-8 text-center text-[11px] sm:text-xs font-bold text-slate-700 dark:text-zinc-300 select-none">
             {fontSize}
           </span>
           <button
             onClick={() => changeFontSize(1)}
-            className="p-2 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
+            className="p-1.5 sm:p-2 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
             title="Tăng cỡ chữ"
           >
-            <Plus className="w-5 h-5" />
+            <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
 
-        <div className="w-px h-6 bg-slate-200 dark:bg-zinc-850 mx-1"></div>
+        <div className="w-px h-5 sm:h-6 bg-slate-200 dark:bg-zinc-850 mx-0.5 sm:mx-1 shrink-0"></div>
 
         {/* Font Family Toggle */}
-        <div className="flex items-center">
+        <div className="flex items-center shrink-0">
           <button
             onClick={toggleFont}
-            className="px-3 py-1.5 text-xs font-extrabold border border-slate-200 dark:border-zinc-800 hover:border-orange-500/20 rounded-full hover:bg-orange-500/10 text-slate-700 dark:text-zinc-300 transition-all cursor-pointer flex items-center gap-1 select-none"
+            className="px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-extrabold border border-slate-200 dark:border-zinc-800 hover:border-orange-500/20 rounded-full hover:bg-orange-500/10 text-slate-700 dark:text-zinc-300 transition-all cursor-pointer flex items-center gap-0.5 sm:gap-1 select-none"
             title="Đổi phông chữ"
           >
-            <Type className="w-4 h-4" />
-            <span>{fontFamily === "serif" ? "Có chân" : "Không chân"}</span>
+            <Type className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span className="hidden xs:inline">{fontFamily === "serif" ? "Có chân" : "Không chân"}</span>
+            <span className="xs:hidden">{fontFamily === "serif" ? "Serif" : "Sans"}</span>
           </button>
         </div>
 
-        <div className="w-px h-6 bg-slate-200 dark:bg-zinc-850 mx-1"></div>
+        <div className="w-px h-5 sm:h-6 bg-slate-200 dark:bg-zinc-850 mx-0.5 sm:mx-1 shrink-0"></div>
 
         {/* Appearance Toggle */}
-        <div className="flex items-center gap-2 px-2">
+        <div className="flex items-center gap-1 sm:gap-2 px-1 sm:px-2 shrink-0">
           <button
             onClick={() => changeTheme("light")}
-            className={`w-7 h-7 rounded-full bg-white border flex items-center justify-center cursor-pointer hover:scale-105 duration-200 ${
+            className={`w-6 h-6 sm:w-7 h-7 rounded-full bg-white border flex items-center justify-center cursor-pointer hover:scale-105 duration-200 ${
               activeTheme === "light"
                 ? "border-orange-600 dark:border-orange-500 ring-2 ring-orange-500/20"
                 : "border-slate-200 dark:border-zinc-850"
@@ -169,17 +170,8 @@ export default function FloatingReaderToolbar({
             title="Sáng"
           />
           <button
-            onClick={() => changeTheme("sepia")}
-            className={`w-7 h-7 rounded-full bg-[#FAF7F2] border flex items-center justify-center cursor-pointer hover:scale-105 duration-200 ${
-              activeTheme === "sepia"
-                ? "border-orange-600 dark:border-orange-500 ring-2 ring-orange-500/20"
-                : "border-slate-200 dark:border-zinc-850"
-            }`}
-            title="Bảo vệ mắt"
-          />
-          <button
             onClick={() => changeTheme("dark")}
-            className={`w-7 h-7 rounded-full bg-[#18181B] border flex items-center justify-center cursor-pointer hover:scale-105 duration-200 ${
+            className={`w-6 h-6 sm:w-7 h-7 rounded-full bg-[#18181B] border flex items-center justify-center cursor-pointer hover:scale-105 duration-200 ${
               activeTheme === "dark"
                 ? "border-orange-600 dark:border-orange-500 ring-2 ring-orange-500/20"
                 : "border-slate-200 dark:border-zinc-850"
@@ -188,18 +180,20 @@ export default function FloatingReaderToolbar({
           />
         </div>
 
-        <div className="w-px h-6 bg-slate-200 dark:bg-zinc-850 mx-1"></div>
+        <div className="w-px h-5 sm:h-6 bg-slate-200 dark:bg-zinc-850 mx-0.5 sm:mx-1 shrink-0"></div>
 
         {/* Scroll to Top */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="p-3 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
+          className="p-2 sm:p-3 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer shrink-0"
           title="Lên đầu trang"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
       </div>
     </div>
   );
 }
+
+
 

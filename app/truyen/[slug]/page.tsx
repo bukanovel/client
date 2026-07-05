@@ -216,10 +216,3 @@ export default async function NovelDetailPage({ params }: Props) {
     </div>
   );
 }
-</main>
-
-      {/* Footer */}
-      <Footer />
-    </div>
-  );
-}
