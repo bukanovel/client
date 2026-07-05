@@ -34,18 +34,21 @@ export default function AdBanner() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    setAdIndex(Math.floor(Math.random() * MOCK_ADS.length));
-    try {
-      const hiddenUntil = localStorage.getItem("bukanovel-ad-hidden-until");
-      if (hiddenUntil && Number(hiddenUntil) > Date.now()) {
-        setIsVisible(false);
-      } else {
+    const timer = setTimeout(() => {
+      setMounted(true);
+      setAdIndex(Math.floor(Math.random() * MOCK_ADS.length));
+      try {
+        const hiddenUntil = localStorage.getItem("bukanovel-ad-hidden-until");
+        if (hiddenUntil && Number(hiddenUntil) > Date.now()) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+      } catch {
         setIsVisible(true);
       }
-    } catch (e) {
-      setIsVisible(true);
-    }
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
@@ -53,10 +56,11 @@ export default function AdBanner() {
     try {
       const expireTime = Date.now() + 30 * 60 * 1000; // 30 phút
       localStorage.setItem("bukanovel-ad-hidden-until", String(expireTime));
-    } catch (e) {
-      console.error("Lỗi khi ghi đè LocalStorage:", e);
+    } catch {
+      console.error("Lỗi khi ghi đè LocalStorage");
     }
   };
+
 
   if (!mounted || !isVisible) {
     return <div className="w-full h-0 transition-all duration-300" />;

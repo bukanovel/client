@@ -40,8 +40,11 @@ export interface Novel {
   author: string;
   synopsis: string;
   coverUrl?: string;
+  status?: string;
+  type?: string;
   stats?: Stats;
   genres?: string[];
   chapters: Chapter[];
 }
+
 

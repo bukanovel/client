@@ -3,6 +3,8 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { useDonateStatus } from "./use-donate-status";
+import { QrCode } from "lucide-react";
+
 
 export default function DonateSection() {
   const { isAvailable, loading, config } = useDonateStatus();
