@@ -19,18 +19,21 @@ export default function NovelActionButtons({ novelSlug, firstChapterSlug }: Prop
   const [historyItem, setHistoryItem] = useState<HistoryItem | null>(null);
 
   useEffect(() => {
-    setMounted(true);
-    try {
-      const historyStr = localStorage.getItem("bukanovel-reading-history");
-      if (historyStr) {
-        const history = JSON.parse(historyStr);
-        if (history[novelSlug]) {
-          setHistoryItem(history[novelSlug]);
+    const timer = setTimeout(() => {
+      setMounted(true);
+      try {
+        const historyStr = localStorage.getItem("bukanovel-reading-history");
+        if (historyStr) {
+          const history = JSON.parse(historyStr);
+          if (history[novelSlug]) {
+            setHistoryItem(history[novelSlug]);
+          }
         }
+      } catch (e) {
+        console.error("Failed to read reading history:", e);
       }
-    } catch (e) {
-      console.error("Failed to read reading history:", e);
-    }
+    }, 0);
+    return () => clearTimeout(timer);
   }, [novelSlug]);
 
   if (!mounted) {

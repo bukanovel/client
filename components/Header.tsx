@@ -98,7 +98,7 @@ export default function Header({ isStatic = false }: HeaderProps) {
               Bukanovel
             </Link>
             <div className="hidden md:flex gap-6">
-              <Link href="/truyen" className={getLinkClass("/truyen")} data-testid="link-novels">
+              <Link href="/" className={getLinkClass("/")} data-testid="link-novels">
                 Danh sách truyện
               </Link>
             </div>

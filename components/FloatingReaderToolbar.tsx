@@ -26,7 +26,10 @@ export default function FloatingReaderToolbar({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const activeTheme = mounted ? theme : "sepia";

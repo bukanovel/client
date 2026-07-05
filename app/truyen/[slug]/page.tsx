@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
@@ -46,7 +45,7 @@ export default async function NovelDetailPage({ params }: Props) {
         {/* Blurred Banner Hero Header */}
         <section className="relative h-[380px] md:h-[460px] w-full overflow-hidden border-b border-slate-200/40 dark:border-zinc-900/60">
           <div className="absolute inset-0 z-0">
-            {novel.coverUrl && (
+            {novel.coverUrl ? (
               <Image
                 src={novel.coverUrl}
                 alt={novel.title}
@@ -54,6 +53,8 @@ export default async function NovelDetailPage({ params }: Props) {
                 priority
                 className="object-cover scale-110 blur-3xl opacity-40 dark:opacity-20"
               />
+            ) : (
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-background to-background" />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-50 dark:from-zinc-950 via-transparent to-transparent z-10"></div>
           </div>
@@ -62,7 +63,7 @@ export default async function NovelDetailPage({ params }: Props) {
             <div className="flex flex-col md:flex-row gap-8 items-start md:items-end w-full">
               {/* Cover Art Image */}
               <div className="shrink-0 w-40 md:w-56 aspect-[2/3] rounded-2xl shadow-2xl border-4 border-white dark:border-zinc-800 overflow-hidden transform md:-mb-12 bg-slate-150 dark:bg-zinc-900 relative">
-                {novel.coverUrl && (
+                {novel.coverUrl ? (
                   <Image
                     src={novel.coverUrl}
                     alt={novel.title}
@@ -70,6 +71,10 @@ export default async function NovelDetailPage({ params }: Props) {
                     sizes="(max-w-768px) 160px, 224px"
                     className="object-cover"
                   />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-white font-black text-4xl md:text-5xl select-none shadow-xs">
+                    {novel.title.charAt(0).toUpperCase()}
+                  </div>
                 )}
               </div>
 

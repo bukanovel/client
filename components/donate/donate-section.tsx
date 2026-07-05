@@ -98,14 +98,28 @@ export default function DonateSection() {
         </div>
 
         {/* Mã QR */}
-        <div className="w-44 h-44 relative border-4 border-dashed border-orange-500/20 rounded-2xl overflow-hidden shadow-md shrink-0 bg-slate-50 dark:bg-zinc-950 flex items-center justify-center">
-          <Image
-            src={config.qr_template_url}
-            alt="Mã QR chuyển khoản ủng hộ VietQR"
-            fill
-            sizes="(max-width: 176px) 100vw, 176px"
-            className="object-cover"
-          />
+        <div className="w-44 h-44 relative border-4 border-dashed border-orange-500/20 rounded-2xl overflow-hidden shadow-md shrink-0 bg-slate-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-4 text-center">
+          {config.qr_template_url ? (
+            <Image
+              src={config.qr_template_url}
+              alt="Mã QR chuyển khoản ủng hộ VietQR"
+              fill
+              sizes="(max-width: 176px) 100vw, 176px"
+              className="object-cover"
+            />
+          ) : (
+            <div className="flex flex-col items-center justify-center space-y-2 select-none">
+              <span className="material-symbols-outlined text-4xl text-orange-500/80">
+                qr_code_2
+              </span>
+              <span className="text-[10px] font-bold text-slate-500 dark:text-zinc-400 uppercase tracking-wider">
+                Mã QR Ủng Hộ
+              </span>
+              <span className="text-[9px] text-slate-400 dark:text-zinc-500">
+                VietQR/MBBank
+              </span>
+            </div>
+          )}
         </div>
       </div>
 
