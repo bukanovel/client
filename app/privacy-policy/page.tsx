@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
           Cập nhật lần cuối: Ngày 05 tháng 07 năm 2026
         </p>
 
-        <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-350 leading-relaxed font-medium">
+        <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-300 leading-relaxed font-medium">
           <p>
             Chào bạn nha! Cảm ơn bạn đã lựa chọn <strong>Bukanovel</strong> làm nơi đọc truyện thư giãn. 
             Để bạn hoàn toàn yên tâm trải nghiệm, tụi mình xin tuyên bố rõ ràng và minh bạch các cam kết bảo mật dữ liệu dựa trên quy định pháp luật Việt Nam hiện hành và chính sách đối tác của Google.

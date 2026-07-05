@@ -16,7 +16,7 @@ export default function TermsOfServicePage() {
           Cập nhật lần cuối: Ngày 05 tháng 07 năm 2026
         </p>
 
-        <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-350 leading-relaxed font-medium">
+        <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-300 leading-relaxed font-medium">
           <p>
             Chào mừng bạn đến với <strong>Bukanovel</strong>. Khi bạn truy cập, lướt đọc truyện hoặc sử dụng bất kỳ tài nguyên tĩnh nào trên website này, đồng nghĩa với việc bạn đã đọc, hiểu và đồng ý tuân thủ các điều khoản dưới đây. 
           </p>

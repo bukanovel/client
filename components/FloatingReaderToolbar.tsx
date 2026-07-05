@@ -128,7 +128,7 @@ export default function FloatingReaderToolbar({
           >
             <span className="material-symbols-outlined !text-[20px]">text_fields</span>
           </button>
-          <span className="w-8 text-center text-xs font-bold text-slate-700 dark:text-zinc-350 select-none">
+          <span className="w-8 text-center text-xs font-bold text-slate-700 dark:text-zinc-300 select-none">
             {fontSize}
           </span>
           <button
@@ -146,7 +146,7 @@ export default function FloatingReaderToolbar({
         <div className="flex items-center">
           <button
             onClick={toggleFont}
-            className="px-3 py-1.5 text-xs font-extrabold border border-slate-200 dark:border-zinc-800 hover:border-orange-500/20 rounded-full hover:bg-orange-500/10 text-slate-700 dark:text-zinc-350 transition-all cursor-pointer flex items-center gap-1 select-none"
+            className="px-3 py-1.5 text-xs font-extrabold border border-slate-200 dark:border-zinc-800 hover:border-orange-500/20 rounded-full hover:bg-orange-500/10 text-slate-700 dark:text-zinc-300 transition-all cursor-pointer flex items-center gap-1 select-none"
             title="Đổi phông chữ"
           >
             <span className="material-symbols-outlined !text-[16px]">font_download</span>
