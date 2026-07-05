@@ -40,9 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     routes.push({
       url: `${baseUrl}/truyen/${novel.slug}`,
       lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
+      changeFrequency: 'daily' as const,
       priority: 0.8,
     });
+
 
     // Trang đọc chương truyện
     novel.chapters.forEach((chap) => {
