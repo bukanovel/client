@@ -39,6 +39,29 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="lazyOnload"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var config = localStorage.getItem('bukanovel-reader-config');
+                  if (config) {
+                    var parsed = JSON.parse(config);
+                    if (parsed.theme === 'dark') {
+                      document.documentElement.classList.add('dark');
+                    } else if (parsed.theme === 'sepia') {
+                      document.body.classList.add('sepia-mode');
+                    }
+                  } else {
+                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                      document.documentElement.classList.add('dark');
+                    }
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider

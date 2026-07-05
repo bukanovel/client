@@ -17,13 +17,13 @@ export default function PrivacyPolicyPage() {
       <Header />
 
       {/* Main Content */}
-      <main className="max-w-3xl mx-auto px-6 py-12 flex-1 w-full space-y-6">
+      <main className="max-w-3xl mx-auto px-6 py-12 flex-1 w-full space-y-6 text-left">
         <h1 className="text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight">
           Chính sách bảo mật thông tin – Bukanovel
         </h1>
         <p className="text-xs text-slate-400 dark:text-zinc-500 font-semibold">Cập nhật lần cuối: Ngày 05 tháng 07 năm 2026</p>
 
-        <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-350 leading-relaxed">
+        <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-350 leading-relaxed font-medium">
           <p>
             Chào bạn nha! Cảm ơn bạn đã lựa chọn <strong>Bukanovel</strong> làm nơi đọc truyện thư giãn.
           </p>
@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
             <p>Ở phiên bản này, Bukanovel chỉ có tính năng đọc truyện Light Novel tĩnh.</p>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                <strong>Dữ liệu đọc truyện:</strong> Mọi thông tin (chương đang đọc, cấu hình giao diện) được xử lý ngay lập tức trên trình duyệt của bạn qua `localStorage`. Tụi mình KHÔNG lưu trữ thông tin này về máy chủ (server) của Bukanovel.
+                <strong>Dữ liệu đọc truyện:</strong> Mọi thông tin (chương đang đọc, cấu hình giao diện) được xử lý ngay lập tức trên trình duyệt của bạn qua bộ nhớ `localStorage`. Tụi mình KHÔNG lưu trữ thông tin này về máy chủ (server) của Bukanovel.
               </li>
               <li>
                 <strong>Dữ liệu hệ thống (Cookies):</strong> Để trang web load nhanh hơn cho những lần truy cập sau và phục vụ cho việc hiển thị quảng cáo, hệ thống sẽ tự động lưu lại một tệp dữ liệu ẩn danh rất nhỏ gọi là Cookie trên trình duyệt của bạn.
@@ -69,6 +69,9 @@ export default function PrivacyPolicyPage() {
                 Việc Google và các đối tác của họ sử dụng Cookie quảng cáo cho phép họ hiển thị những quảng cáo có liên quan và hữu ích nhất đến bạn.
               </li>
               <li>
+                Tụi mình cam kết tuân thủ nghiêm ngặt các quy định về bảo vệ dữ liệu cá nhân theo <strong>Nghị định 13/NĐ-CP</strong> của Chính phủ Việt Nam đối với mọi hoạt động xử lý dữ liệu liên quan.
+              </li>
+              <li>
                 Bạn hoàn toàn có quyền chủ động <strong>từ chối</strong> việc sử dụng Cookie cho quảng cáo được cá nhân hóa bằng cách truy cập vào trang <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer" className="text-orange-600 dark:text-orange-500 hover:underline">Cài đặt quảng cáo của Google</a>.
               </li>
             </ul>
@@ -80,7 +83,7 @@ export default function PrivacyPolicyPage() {
               Nếu bạn có bất kỳ câu hỏi nào về các chính sách này, hoặc vô tình thấy một quảng cáo nào đó chưa phù hợp, đừng ngại &quot;ới&quot; tụi mình ngay qua các thông tin dưới đây nha:
             </p>
             <ul className="list-disc pl-5 space-y-1">
-              <li><strong>Nền tảng:</strong> Bukanovel - Trang đọc truyện Light Novel AI Client-Only</li>
+              <li><strong>Nền tảng:</strong> Bukanovel - Trang đọc truyện Light Novel  </li>
               <li><strong>Chịu trách nhiệm nội dung:</strong> Nguyễn Đức Tâm</li>
               <li><strong>Địa chỉ:</strong> Tổ 2, Phường Cầu Giấy, TP. Hà Nội, Việt Nam</li>
               <li><strong>Email hỗ trợ:</strong> contact@bukanovel.com</li>

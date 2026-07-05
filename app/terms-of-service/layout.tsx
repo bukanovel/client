@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Điều khoản dịch vụ sử dụng EnStudey",
-  description: "Quy định và điều khoản sử dụng nền tảng EnStudey, điều kiện sử dụng công cụ tính điểm và miễn trừ trách nhiệm tuyển sinh.",
+  title: "Điều khoản dịch vụ sử dụng Bukanovel",
+  description: "Quy định và điều khoản sử dụng nền tảng đọc Light Novel Bukanovel, miễn trừ trách nhiệm nội dung và quy tắc donate.",
 };
 
 export default function TermsLayout({

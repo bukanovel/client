@@ -17,15 +17,15 @@ export default function TermsOfServicePage() {
       <Header />
 
       {/* Main Content */}
-      <main className="max-w-3xl mx-auto px-6 py-12 flex-1 w-full space-y-6">
+      <main className="max-w-3xl mx-auto px-6 py-12 flex-1 w-full space-y-6 text-left">
         <h1 className="text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight">
           Điều khoản sử dụng dịch vụ – Bukanovel
         </h1>
         <p className="text-xs text-slate-400 dark:text-zinc-500 font-semibold">Cập nhật lần cuối: Ngày 05 tháng 07 năm 2026</p>
 
-        <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-350 leading-relaxed">
+        <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-355 leading-relaxed font-medium">
           <p>
-            Chào bạn nha! Cảm ơn bạn đã ghé thăm Bukanovel – trang đọc truyện Light Novel AI Client-Only hoàn toàn miễn phí.
+            Chào bạn nha! Cảm ơn bạn đã ghé thăm Bukanovel – trang đọc truyện Light Novel hoàn toàn miễn phí.
           </p>
           <p>
             Để chúng mình có thể đồng hành cùng nhau lâu dài và giữ cho website luôn hoạt động ổn định, 100% miễn phí, bạn vui lòng dành vài phút đọc kỹ những &quot;luật chơi&quot; nho nhỏ dưới đây nghen. Khi bạn sử dụng các tiện ích trên Bukanovel, đồng nghĩa với việc bạn đã vui vẻ đồng ý với các điều khoản này rồi đó!
@@ -50,6 +50,7 @@ export default function TermsOfServicePage() {
             <p>Để Bukanovel có thể duy trì server hoạt động 24/7 và luôn mở cửa miễn phí cho độc giả, chúng mình có đặt các vị trí quảng cáo từ đối tác Google AdSense.</p>
             <ul className="list-disc pl-5 space-y-1">
               <li>Chúng mình cam kết các vị trí quảng cáo luôn được thiết kế gọn gàng, không che khuất hay làm gián đoạn cảm xúc khi đọc truyện của bạn.</li>
+              <li><strong>Quyền tắt quảng cáo:</strong> Người đọc hoàn toàn có quyền chủ động tắt hoặc chặn quảng cáo bằng một chạm theo các quy định Luật Quảng cáo năm 2026 của Việt Nam.</li>
               <li><strong>Nghiêm cấm hành vi gian lận:</strong> Mong bạn KHÔNG sử dụng bất kỳ phần mềm, công cụ tự động (bot) nào để bấm (click) liên tục vào quảng cáo trên Bukanovel nhằm mục đích phá hoại. Nếu hệ thống phát hiện IP có hành vi bất thường, tụi mình buộc lòng phải chặn truy cập của bạn để bảo vệ hệ thống.</li>
             </ul>
           </section>

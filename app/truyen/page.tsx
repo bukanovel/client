@@ -28,7 +28,7 @@ export default function NovelsCatalogPage() {
           {novelsData.map((novel) => (
             <div
               key={novel.id}
-              className="bg-white dark:bg-zinc-900 border border-slate-150 dark:border-zinc-800 rounded-2xl p-6 shadow-xs hover:shadow-md hover:border-orange-500/20 dark:hover:border-orange-500/20 transition duration-300 flex flex-col justify-between space-y-4"
+              className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-2xl p-6 shadow-xs hover:shadow-md hover:border-orange-500/20 dark:hover:border-orange-500/20 transition duration-300 flex flex-col justify-between space-y-4"
             >
               <div className="space-y-2">
                 <span className="text-[10px] font-bold uppercase tracking-wider bg-orange-50 dark:bg-orange-950/20 text-orange-600 dark:text-orange-400 px-2.5 py-1 rounded-md inline-block">

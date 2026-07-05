@@ -9,12 +9,15 @@ export default function ThemeToggle() {
 
   // Đảm bảo chỉ hiển thị UI khi đã mounted ở client để tránh Hydration Mismatch
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   if (!mounted) {
     return (
-      <div className="w-[44px] h-[44px] rounded-xl bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 animate-pulse" />
+      <div className="w-[44px] h-[44px] rounded-xl bg-neutral-100 dark:bg-neutral-800 border border-slate-200 dark:border-zinc-800 animate-pulse" />
     );
   }
 
@@ -27,7 +30,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 min-w-[44px] min-h-[44px] flex items-center justify-center border border-neutral-200 dark:border-neutral-700 hover:opacity-90 transition-all"
+      className="p-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 min-w-[44px] min-h-[44px] flex items-center justify-center border border-slate-200 dark:border-zinc-800 hover:opacity-90 transition-all"
       aria-label="Chuyển chế độ sáng tối"
       data-testid="btn-theme-toggle"
     >

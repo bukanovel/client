@@ -5,18 +5,28 @@
     "slug": "ke-sang-tao-the-gioi-ao",
     "author": "AI Writer",
     "synopsis": "Một lập trình viên trẻ vô tình phát hiện ra dòng code bí ẩn có khả năng thay đổi thế giới thực. Nhưng liệu anh ta đang làm chủ công nghệ hay chỉ là con cờ trong một trò chơi quy mô vũ trụ?",
+    "coverUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSDj1jX6kGebdjd9Qlg5H2SjBU8BDI8OVDQ_f0MxqMhTs1ofjNBWYVJYGqyoqfr6IaTn64cFN5fE7RpqMgV7z-fE25TqgxcMvy85JZEk9FESduT0uJAdtGImNiL24jINuxSxeZggEhoA2GBIstT4A0LN6V-U91Je4mlRprSpYhUvLPbokYDbd1EvGr2qL8KmuabR1Nk1_BicqWjK2HVKKcJtNxPo2H3AYxikEukrOu32FSgH4yFOhP",
+    "stats": {
+      "views": "1.2M",
+      "nominations": "4.8k",
+      "followers": "2.4k",
+      "rating": 9.5
+    },
+    "genres": ["Sci-Fi", "Huyền Huyễn", "Dị Năng", "Hệ Thống"],
     "chapters": [
       {
         "id": "1",
-        "title": "Chương 1: Dòng code lúc nửa đêm",
+        "title": "Dòng code lúc nửa đêm",
         "slug": "chuong-1-dong-code-luc-nua-dem",
+        "timeAgo": "2 giờ trước",
         "content": "Gió rít qua khe cửa sổ của căn hộ nhỏ trên tầng 15. Lâm nhìn chằm chằm vào màn hình máy tính đang nhấp nháy dòng chữ màu xanh lục. Anh đã ngồi code liên tục suốt 14 tiếng đồng hồ, đầu óc đã bắt đầu mệt mỏi và mơ hồ.\n\nNhưng có một đoạn script lạ lùng xuất hiện trong repository của anh mà anh không hề nhớ mình đã viết. Nó không thuộc về bất kỳ thư viện phổ biến nào, cấu trúc logic của nó kỳ lạ đến mức như được viết bởi một thực thể ngoài hành tinh.\n\nLâm đưa tay lên bàn phím, ngón tay run rẩy gõ dòng lệnh thực thi. Bùm! Một tiếng nổ nhỏ vang lên trong đầu anh, toàn bộ không gian xung quanh bắt đầu biến đổi..."
       },
       {
         "id": "2",
-        "title": "Chương 2: Hiện thực bị bẻ cong",
+        "title": "Hiện thực bị bẻ cong",
         "slug": "chuong-2-hien-thuc-bi-be-cong",
-        "content": "Khi Lâm mở mắt ra, anh nhận ra mình không còn ở trong căn phòng quen thuộc nữa. Bàn làm việc bằng gỗ đã biến thành một bề mặt kim loại sáng bóng chứa đầy những ký tự ma thuật kỳ lạ phát sáng.\n\nKhông khí xung quanh nồng nặc mùi ozone. Anh nhìn qua ô cửa kính lớn trước mặt, thay vì đường phố Hà Nội ồn ào xa lộ quen thuộc, bên ngoài là một khoảng không vô tận với các luồng sáng đa sắc màu chảy xiết như những dòng sông dữ liệu.\n\n'Chào mừng người sáng tạo số 07.' Một giọng nói vang lên từ phía sau, đều đều và vô hồn..."
+        "timeAgo": "12 giờ trước",
+        "content": "Khi Lâm mở mắt ra, anh nhận ra mình không còn ở trong căn phòng quen thuộc nữa. Bàn làm việc bằng gỗ đã biến thành một bề mặt kim loại sáng bóng chứa đầy những ký tự ma thuật kỳ lạ phát sáng.\n\nKhông khí xung quanh nồng nặc mùi ozone. Anh nhìn qua ô cửa kính lớn trước mặt, thay vì đường phố Hà Nội ồn ào xa lộ quen thuộc, bên ngoài là một khoảng không vô chậm với các luồng sáng đa sắc màu chảy xiết như những dòng sông dữ liệu.\n\n'Chào mừng người sáng tạo số 07.' Một giọng nói vang lên từ phía sau, đều đều và vô hồn..."
       }
     ]
   },
@@ -24,13 +34,22 @@
     "id": "2",
     "title": "Nhịp Điệu Của Tương Lai",
     "slug": "nhip-dieu-cua-tuong-lai",
-    "author": "AI Writer",
+    "author": "AI Songsmith",
     "synopsis": "Trong thế giới nơi âm nhạc được tạo ra hoàn toàn bởi thuật toán AI siêu việt, một nhóm nhạc sĩ tự do đi tìm lại âm điệu thô mộc của con người.",
+    "coverUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAA5-qroVGDN8nOhcVHjMShJ43kJxmZILybJW5si-j7WpL-OWCpp71QXlEpFTIpithn8vGgd7mm7qxrzOIkFXDRtztvtbysBBFZn5TqYAaKUB-ppuJ9y7Ig_zhfYrO4Xda4RcU6e_AQZhjEcj19m9-3JrDGKb3jHpQPou0tCZpiLHOm_a-x-XksZ3cM6SDnySEqwovseBPhOAp5S4cyTolOW1QepJyyOeAThpricir1oQxQTAN1JIOP",
+    "stats": {
+      "views": "850k",
+      "nominations": "3.1k",
+      "followers": "1.8k",
+      "rating": 9.2
+    },
+    "genres": ["Drama", "Sci-Fi", "Modern Romance"],
     "chapters": [
       {
         "id": "1",
-        "title": "Chương 1: Tiếng đàn câm lặng",
+        "title": "Tiếng đàn câm lặng",
         "slug": "chuong-1-tieng-dan-cam-lang",
+        "timeAgo": "1 ngày trước",
         "content": "Ở thành phố Neo-Hanoi của năm 2090, không còn ai chơi nhạc cụ nữa. Các thuật toán AI của tập đoàn SoundSphere có khả năng dự đoán chính xác đến 99.9% tần số âm thanh nào sẽ kích thích lượng dopamine tối đa trong não bộ người nghe để tự động sản xuất hàng triệu bài hát mỗi giây.\n\nNhưng Khánh vẫn giữ cây guitar acoustic cũ kỹ của ông nội để lại dưới gầm giường. Cây đàn đã mất một dây, lớp gỗ mục nát, nhưng mỗi khi anh gảy lên một nốt nhạc, nó mang lại một cảm xúc kỳ lạ, không hoàn hảo nhưng sống động..."
       }
     ]

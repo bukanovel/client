@@ -70,7 +70,7 @@ export default function Header({ isStatic = false }: HeaderProps) {
   let headerClass = "left-0 right-0 w-full transition-all duration-300 ";
   
   if (isStatic) {
-    headerClass += "relative bg-white dark:bg-zinc-900 border-b border-slate-100 dark:border-zinc-800 h-16";
+    headerClass += "relative bg-white dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800 h-16";
   } else {
     headerClass += "fixed top-0 z-50 ";
     
@@ -81,9 +81,9 @@ export default function Header({ isStatic = false }: HeaderProps) {
     }
 
     if (isSticky) {
-      headerClass += "bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-slate-100 dark:border-zinc-800 h-14 shadow-sm";
+      headerClass += "bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-slate-200 dark:border-zinc-800 h-14 shadow-sm";
     } else {
-      headerClass += "bg-white dark:bg-zinc-900 border-b border-slate-100 dark:border-zinc-800 h-16";
+      headerClass += "bg-white dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800 h-16";
     }
   }
 
