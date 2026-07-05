@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import ChapterListFilter from "@/components/ChapterListFilter";
 import NovelActionButtons from "@/components/NovelActionButtons";
 import { getAllNovels, getNovelBySlug } from "@/lib/novels";
-import { User, BookOpen, QrCode } from "lucide-react";
+import { User, BookOpen } from "lucide-react";
 
 interface Props {
   params: Promise<{
@@ -59,7 +59,7 @@ export default async function NovelDetailPage({ params }: Props) {
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-50 dark:from-zinc-950 via-transparent to-transparent z-10"></div>
           </div>
-          
+
           <div className="relative z-20 h-full flex items-end px-6 max-w-6xl mx-auto pb-8">
             <div className="flex flex-col md:flex-row gap-8 items-start md:items-end w-full">
               {/* Cover Art Image */}
@@ -113,7 +113,7 @@ export default async function NovelDetailPage({ params }: Props) {
         <section className="max-w-6xl mx-auto px-6 mt-16 md:mt-24 grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Main Column (Synopsis & Chapters) */}
           <div className="lg:col-span-2 space-y-8">
-             {/* Synopsis Card */}
+            {/* Synopsis Card */}
             <div className="bg-white dark:bg-zinc-900/50 p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 text-left">
               <div className="flex items-center gap-2 mb-4 text-orange-600 dark:text-orange-500 border-b border-slate-200 dark:border-zinc-800 pb-3">
                 <BookOpen className="w-5 h-5" />
@@ -191,16 +191,14 @@ export default async function NovelDetailPage({ params }: Props) {
                 <p className="text-xs text-slate-500 dark:text-zinc-400 italic">
                   Tiếp thêm động lực cho dịch giả để ra chương nhanh hơn nhé!
                 </p>
-                <div className="bg-white dark:bg-zinc-950 p-3 rounded-xl border border-slate-200 dark:border-zinc-800/60 shadow-inner flex items-center justify-center w-36 h-36 relative overflow-hidden group/qr">
-                  <QrCode className="w-12 h-12 text-slate-300 dark:text-zinc-700" />
-                  <div className="absolute inset-0 bg-white/95 dark:bg-zinc-950/95 flex flex-col items-center justify-center p-2 opacity-0 group-hover/qr:opacity-100 transition-opacity duration-300">
-                    <p className="text-[10px] font-bold text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-1">
-                      VietQR
-                    </p>
-                    <p className="text-[9px] text-slate-400 dark:text-zinc-500 leading-tight">
-                      Ủng hộ tự nguyện duy trì website
-                    </p>
-                  </div>
+                <div className="bg-white dark:bg-zinc-950 rounded-xl border border-slate-200 dark:border-zinc-800/60 shadow-inner flex items-center justify-center w-36 h-36 relative overflow-hidden">
+                  <Image
+                    src="/qr-donate.webp"
+                    alt="Donate QR Code"
+                    fill
+                    sizes="(max-width: 144px) 100vw, 144px"
+                    className="object-contain p-2"
+                  />
                 </div>
                 <button className="w-full bg-slate-900 hover:bg-orange-600 dark:bg-zinc-800 dark:hover:bg-orange-500 text-white text-xs font-bold py-2.5 rounded-xl active:scale-95 duration-200 transition-all">
                   Mời cafe ngay ☕
