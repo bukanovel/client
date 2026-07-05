@@ -18,7 +18,7 @@ export default function TermsOfServicePage() {
 
         <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-300 leading-relaxed font-medium">
           <p>
-            Chào mừng bạn đến với <strong>Bukanovel</strong>. Khi bạn truy cập, lướt đọc truyện hoặc sử dụng bất kỳ tài nguyên tĩnh nào trên website này, đồng nghĩa với việc bạn đã đọc, hiểu và đồng ý tuân thủ các điều khoản dưới đây. 
+            Chào mừng bạn đến với <strong>Bukanovel</strong>. Khi bạn truy cập, lướt đọc truyện hoặc sử dụng bất kỳ tài nguyên nào trên website này, đồng nghĩa với việc bạn đã đọc, hiểu và đồng ý tuân thủ các điều khoản dưới đây. 
           </p>
 
           <section className="space-y-2">
@@ -46,7 +46,7 @@ export default function TermsOfServicePage() {
                 Toàn bộ cốt truyện, bối cảnh và tuyến nhân vật trên website là sản phẩm độc bản được lên ý tưởng bởi trí tuệ nhân tạo (AI) và có sự biên tập trực tiếp từ con người, không sao chép từ bất kỳ tác phẩm hoặc tác giả có thật nào trên thị trường.
               </li>
               <li>
-                Tụi mình nghiêm cấm mọi hành vi sao chép, sử dụng phần mềm tự động (Scraper bot) để cào dữ liệu chữ của Bukanovel nhằm mục đích phân phối lại trên các ứng dụng hoặc website thương mại khác khi chưa có sự đồng ý bằng văn bản của ban quản trị.
+                Tụi mình nghiêm cấm mọi hành vi sao chép, sử dụng các công cụ tự động để lấy dữ liệu chữ của Bukanovel nhằm mục đích phân phối lại trên các ứng dụng hoặc website thương mại khác khi chưa có sự đồng ý bằng văn bản của ban quản trị.
               </li>
             </ul>
           </section>
@@ -54,14 +54,14 @@ export default function TermsOfServicePage() {
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-slate-950 dark:text-white">3. Quy tắc hành vi độc giả chống gian lận quảng cáo</h2>
             <p>
-              Bukanovel sử dụng mạng lưới quảng cáo liên kết từ đối tác thứ ba (Google AdSense) để trang trải chi phí vận hành máy chủ tĩnh. Chúng mình yêu cầu bạn cam kết bảo vệ hệ thống:
+              Bukanovel sử dụng mạng lưới quảng cáo liên kết từ đối tác thứ ba (Google AdSense) để trang trải chi phí vận hành hệ thống. Chúng mình yêu cầu bạn cam kết bảo vệ hệ thống:
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                <strong>Không gian lận click (Click Fraud):</strong> Nghiêm cấm mọi hành vi cố tình nhấp chuột liên tục vào quảng cáo (click tặc), sử dụng các công cụ tạo lưu lượng truy cập ảo, botnet hoặc proxy giả lập hành vi người dùng nhằm mục đích trục lợi hoặc phá hoại tài khoản AdSense của trang.
+                <strong>Không gian lận tương tác quảng cáo:</strong> Nghiêm cấm mọi hành vi cố tình nhấp chuột liên tục vào quảng cáo, sử dụng các công cụ tạo lưu lượng truy cập ảo hoặc giả lập hành vi người dùng nhằm mục đích trục lợi hoặc phá hoại tài khoản quảng cáo của trang.
               </li>
               <li>
-                <strong>Bảo vệ an ninh mạng:</strong> Tuyệt đối không tấn công từ chối dịch vụ (DDoS), chèn mã độc vào mã nguồn tĩnh hoặc tìm cách can thiệp trái phép vào hạ tầng phân phối HTML của Bukanovel (Tuân thủ Luật An ninh mạng Việt Nam). Hệ thống bảo vệ tự động của Cloudflare sẽ tự động ghi vết IP và chặn truy cập vĩnh viễn nếu phát hiện dấu hiệu bất thường.
+                <strong>Bảo vệ an ninh mạng:</strong> Tuyệt đối không thực hiện các hành vi tấn công mạng, chèn mã độc hoặc tìm cách can thiệp trái phép vào hệ thống của Bukanovel (Tuân thủ Luật An ninh mạng Việt Nam). Hệ thống bảo vệ tự động sẽ tự động chặn truy cập vĩnh viễn đối với các hành vi bất thường.
               </li>
             </ul>
           </section>

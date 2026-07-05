@@ -32,10 +32,10 @@ export default function PrivacyPolicyPage() {
                 <strong>Không đăng nhập / đăng ký:</strong> Hệ thống không thiết lập bất kỳ tính năng tạo tài khoản nào. Bạn không cần cung cấp Họ tên, Email, Số điện thoại hay bất kỳ thông tin cá nhân nào để đọc truyện.
               </li>
               <li>
-                <strong>Không lưu vết máy chủ:</strong> Website không sử dụng cơ sở dữ liệu (Database) để theo dõi hành vi hay lưu trữ lịch sử đọc truyện của bạn trên hệ thống backend.
+                <strong>Không lưu vết dữ liệu:</strong> Website không lưu trữ lịch sử đọc truyện hay theo dõi hành vi của bạn trên hệ thống.
               </li>
               <li>
-                <strong>Lịch sử đọc local:</strong> Toàn bộ tủ truyện hoặc chương truyện bạn đang đọc dở chỉ được lưu tạm thời trên chính trình duyệt điện thoại/máy tính của bạn (qua LocalStorage). Bạn có thể xóa bỏ hoàn toàn dữ liệu này bất cứ lúc nào bằng cách xóa lịch sử duyệt web.
+                <strong>Lịch sử đọc lưu trên trình duyệt:</strong> Toàn bộ tủ truyện hoặc chương truyện bạn đang đọc dở chỉ được lưu tạm thời trên bộ nhớ trình duyệt điện thoại/máy tính của bạn. Bạn có thể xóa bỏ hoàn toàn dữ liệu này bất cứ lúc nào bằng cách xóa lịch sử duyệt web.
               </li>
             </ul>
           </section>
@@ -47,10 +47,10 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                <strong>Tắt quảng cáo một chạm:</strong> Toàn bộ các khối quảng cáo (bao gồm cả quảng cáo chuyển tiếp Interstitial Ads giữa các chương) luôn hiển thị rõ ràng nút đóng (X) hoặc nút bỏ qua ngay lập tức, cho phép bạn tắt quảng cáo chỉ với một lần chạm duy nhất mà không phải chờ đợi ép buộc.
+                <strong>Tắt quảng cáo một chạm:</strong> Toàn bộ các khối quảng cáo (bao gồm cả quảng cáo chuyển tiếp giữa các chương) luôn hiển thị rõ ràng nút đóng (X) hoặc nút bỏ qua ngay lập tức, cho phép bạn tắt quảng cáo chỉ với một lần chạm duy nhất mà không phải chờ đợi ép buộc.
               </li>
               <li>
-                <strong>Bảo vệ trải nghiệm đọc:</strong> Quảng cáo không được thiết kế dạng popup che khuất nội dung chính hoặc gây cản trở thao tác chuyển chương tự nhiên của bạn.
+                <strong>Bảo vệ trải nghiệm đọc:</strong> Quảng cáo không được thiết kế dạng che khuất nội dung chính hoặc gây cản trở thao tác chuyển chương tự nhiên của bạn.
               </li>
             </ul>
           </section>
