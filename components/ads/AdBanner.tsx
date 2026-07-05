@@ -1,12 +1,11 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
+import { X } from "lucide-react";
 
 const MOCK_ADS = [
   {
     title: "Đọc Truyện Không Giới Hạn Cùng AI Novelist",
     description: "Khám phá hàng ngàn thế giới truyện dị giới, đô thị được sáng tác độc bản bởi AI thế hệ mới.",
-    cta: "Khám phá ngay",
+    cta: "Khám phá ngay 🚀",
     tag: "Tài trợ",
     gradient: "from-orange-500/10 via-red-500/5 to-transparent",
     border: "border-orange-500/20"
@@ -14,7 +13,7 @@ const MOCK_ADS = [
   {
     title: "Tự Sáng Tác Light Novel Của Riêng Bạn",
     description: "Nhận hướng dẫn xây dựng Prompt viết truyện ngắn có nhịp độ cực cuốn từ Bukanovel.",
-    cta: "Xem cẩm nang",
+    cta: "Xem cẩm nang 📖",
     tag: "Đề xuất",
     gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
     border: "border-emerald-500/20"
@@ -31,13 +30,37 @@ const MOCK_ADS = [
 
 export default function AdBanner() {
   const [adIndex, setAdIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setAdIndex(Math.floor(Math.random() * MOCK_ADS.length));
-    }, 0);
-    return () => clearTimeout(timer);
+    setMounted(true);
+    setAdIndex(Math.floor(Math.random() * MOCK_ADS.length));
+    try {
+      const hiddenUntil = localStorage.getItem("bukanovel-ad-hidden-until");
+      if (hiddenUntil && Number(hiddenUntil) > Date.now()) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    } catch (e) {
+      setIsVisible(true);
+    }
   }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    try {
+      const expireTime = Date.now() + 30 * 60 * 1000; // 30 phút
+      localStorage.setItem("bukanovel-ad-hidden-until", String(expireTime));
+    } catch (e) {
+      console.error("Lỗi khi ghi đè LocalStorage:", e);
+    }
+  };
+
+  if (!mounted || !isVisible) {
+    return <div className="w-full h-0 transition-all duration-300" />;
+  }
 
   const ad = MOCK_ADS[adIndex];
 
@@ -46,10 +69,17 @@ export default function AdBanner() {
       className={`w-full min-h-[250px] bg-gradient-to-r ${ad.gradient} bg-white dark:bg-zinc-900 flex flex-col justify-between p-6 my-6 rounded-2xl overflow-hidden border ${ad.border} shadow-sm transition-all duration-300 relative`}
       data-testid="ad-banner"
     >
-      <div className="absolute top-3 right-3 flex items-center gap-1">
+      <div className="absolute top-3 right-3 flex items-center gap-2">
         <span className="text-[10px] font-semibold text-slate-400 dark:text-zinc-500 uppercase tracking-widest bg-slate-100 dark:bg-zinc-800 px-2 py-0.5 rounded">
           {ad.tag}
         </span>
+        <button 
+          onClick={handleClose}
+          className="p-1 rounded-md text-slate-400 hover:text-slate-650 dark:hover:text-zinc-300 transition cursor-pointer flex items-center justify-center w-6 h-6"
+          aria-label="Đóng quảng cáo"
+        >
+          <X className="w-4 h-4" />
+        </button>
       </div>
 
       <div className="space-y-2 mt-2">
@@ -73,3 +103,4 @@ export default function AdBanner() {
     </div>
   );
 }
+

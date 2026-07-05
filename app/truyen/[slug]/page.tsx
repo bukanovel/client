@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ChapterListFilter from "@/components/ChapterListFilter";
 import NovelActionButtons from "@/components/NovelActionButtons";
 import { getAllNovels, getNovelBySlug } from "@/lib/novels";
+import { User, BookOpen, QrCode } from "lucide-react";
 
 interface Props {
   params: Promise<{
@@ -91,10 +92,8 @@ export default async function NovelDetailPage({ params }: Props) {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-950 dark:text-white mb-3 tracking-tight leading-tight">
                   {novel.title}
                 </h1>
-                <p className="text-sm md:text-base font-semibold text-slate-600 dark:text-zinc-400 flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-orange-600 dark:text-orange-500 text-lg">
-                    person
-                  </span>
+                <p className="text-sm md:text-base font-semibold text-slate-650 dark:text-zinc-400 flex items-center gap-1.5">
+                  <User className="w-4 h-4 text-orange-650 dark:text-orange-500" />
                   Tác giả: {novel.author}
                 </p>
               </div>
@@ -117,10 +116,10 @@ export default async function NovelDetailPage({ params }: Props) {
              {/* Synopsis Card */}
             <div className="bg-white dark:bg-zinc-900/50 p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-zinc-800 text-left">
               <div className="flex items-center gap-2 mb-4 text-orange-600 dark:text-orange-500 border-b border-slate-200 dark:border-zinc-800 pb-3">
-                <span className="material-symbols-outlined">description</span>
+                <BookOpen className="w-5 h-5" />
                 <h2 className="text-lg font-bold text-slate-950 dark:text-white">Tóm tắt nội dung</h2>
               </div>
-              <div className="text-sm md:text-base text-slate-600 dark:text-zinc-450 leading-relaxed space-y-4 whitespace-pre-line font-medium">
+              <div className="text-sm md:text-base text-slate-655 dark:text-zinc-450 leading-relaxed space-y-4 whitespace-pre-line font-medium">
                 {novel.synopsis}
               </div>
             </div>
@@ -174,7 +173,7 @@ export default async function NovelDetailPage({ params }: Props) {
                 {novel.genres?.map((genre) => (
                   <span
                     key={genre}
-                    className="bg-slate-100 hover:bg-orange-600 hover:text-white dark:bg-zinc-800 dark:hover:bg-orange-500 text-slate-600 dark:text-zinc-400 px-3.5 py-1.5 rounded-xl text-xs font-bold cursor-pointer transition-colors duration-200"
+                    className="bg-slate-100 hover:bg-orange-600 hover:text-white dark:bg-zinc-800 dark:hover:bg-orange-500 text-slate-650 dark:text-zinc-400 px-3.5 py-1.5 rounded-xl text-xs font-bold cursor-pointer transition-colors duration-200"
                   >
                     {genre}
                   </span>
@@ -193,9 +192,7 @@ export default async function NovelDetailPage({ params }: Props) {
                   Tiếp thêm động lực cho dịch giả để ra chương nhanh hơn nhé!
                 </p>
                 <div className="bg-white dark:bg-zinc-950 p-3 rounded-xl border border-slate-200 dark:border-zinc-800/60 shadow-inner flex items-center justify-center w-36 h-36 relative overflow-hidden group/qr">
-                  <span className="material-symbols-outlined text-5xl text-slate-300 dark:text-zinc-700">
-                    qr_code_2
-                  </span>
+                  <QrCode className="w-12 h-12 text-slate-300 dark:text-zinc-700" />
                   <div className="absolute inset-0 bg-white/95 dark:bg-zinc-950/95 flex flex-col items-center justify-center p-2 opacity-0 group-hover/qr:opacity-100 transition-opacity duration-300">
                     <p className="text-[10px] font-bold text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-1">
                       VietQR
@@ -213,6 +210,13 @@ export default async function NovelDetailPage({ params }: Props) {
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
+}
+</main>
 
       {/* Footer */}
       <Footer />

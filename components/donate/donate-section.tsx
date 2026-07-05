@@ -109,9 +109,7 @@ export default function DonateSection() {
             />
           ) : (
             <div className="flex flex-col items-center justify-center space-y-2 select-none">
-              <span className="material-symbols-outlined text-4xl text-orange-500/80">
-                qr_code_2
-              </span>
+              <QrCode className="w-10 h-10 text-orange-500/80" />
               <span className="text-[10px] font-bold text-slate-500 dark:text-zinc-400 uppercase tracking-wider">
                 Mã QR Ủng Hộ
               </span>

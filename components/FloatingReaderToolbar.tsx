@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
+import { BookOpen, Minus, Plus, Type, ArrowUp } from "lucide-react";
 
 interface Props {
   novelSlug: string;
@@ -114,7 +115,7 @@ export default function FloatingReaderToolbar({
           className="p-3 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
           title="Mục lục"
         >
-          <span className="material-symbols-outlined">menu_book</span>
+          <BookOpen className="w-5 h-5" />
         </button>
 
         <div className="w-px h-6 bg-slate-200 dark:bg-zinc-850 mx-1"></div>
@@ -126,7 +127,7 @@ export default function FloatingReaderToolbar({
             className="p-2 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
             title="Giảm cỡ chữ"
           >
-            <span className="material-symbols-outlined !text-[20px]">text_fields</span>
+            <Minus className="w-4 h-4" />
           </button>
           <span className="w-8 text-center text-xs font-bold text-slate-700 dark:text-zinc-300 select-none">
             {fontSize}
@@ -136,7 +137,7 @@ export default function FloatingReaderToolbar({
             className="p-2 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
             title="Tăng cỡ chữ"
           >
-            <span className="material-symbols-outlined !text-[28px]">text_fields</span>
+            <Plus className="w-5 h-5" />
           </button>
         </div>
 
@@ -149,7 +150,7 @@ export default function FloatingReaderToolbar({
             className="px-3 py-1.5 text-xs font-extrabold border border-slate-200 dark:border-zinc-800 hover:border-orange-500/20 rounded-full hover:bg-orange-500/10 text-slate-700 dark:text-zinc-300 transition-all cursor-pointer flex items-center gap-1 select-none"
             title="Đổi phông chữ"
           >
-            <span className="material-symbols-outlined !text-[16px]">font_download</span>
+            <Type className="w-4 h-4" />
             <span>{fontFamily === "serif" ? "Có chân" : "Không chân"}</span>
           </button>
         </div>
@@ -195,9 +196,10 @@ export default function FloatingReaderToolbar({
           className="p-3 hover:bg-orange-500/10 text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 rounded-full transition-colors flex items-center justify-center cursor-pointer"
           title="Lên đầu trang"
         >
-          <span className="material-symbols-outlined">vertical_align_top</span>
+          <ArrowUp className="w-5 h-5" />
         </button>
       </div>
     </div>
   );
 }
+

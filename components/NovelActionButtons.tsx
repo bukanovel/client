@@ -44,7 +44,6 @@ export default function NovelActionButtons({ novelSlug, firstChapterSlug }: Prop
           href={`/truyen/${novelSlug}/${firstChapterSlug}`}
           className="w-full md:w-auto px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 duration-200 select-none pointer-events-none opacity-50"
         >
-          <span className="material-symbols-outlined text-sm">auto_stories</span>
           Đọc từ đầu nhen 🚀
         </Link>
       </div>
@@ -57,7 +56,6 @@ export default function NovelActionButtons({ novelSlug, firstChapterSlug }: Prop
         href={`/truyen/${novelSlug}/${firstChapterSlug}`}
         className="w-full md:w-auto px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 duration-200"
       >
-        <span className="material-symbols-outlined text-sm">auto_stories</span>
         Đọc từ đầu nhen 🚀
       </Link>
       
@@ -66,10 +64,10 @@ export default function NovelActionButtons({ novelSlug, firstChapterSlug }: Prop
           href={`/truyen/${novelSlug}/${historyItem.chapterSlug}`}
           className="w-full md:w-auto px-8 py-4 bg-slate-900 dark:bg-zinc-800 hover:bg-slate-800 dark:hover:bg-zinc-700 text-white font-bold rounded-full shadow-lg transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 duration-200"
         >
-          <span className="material-symbols-outlined text-sm">bookmark</span>
           Đọc tiếp: {historyItem.chapterTitle.replace("Chương ", "Chương ")} 📖
         </Link>
       )}
     </div>
   );
 }
+

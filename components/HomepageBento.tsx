@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Novel } from "@/types";
+import { Search, X } from "lucide-react";
 
 interface HomepageBentoProps {
   initialNovels: Novel[];
@@ -109,15 +110,13 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
             placeholder="Tìm tên truyện hoặc tác giả..."
             className="w-full px-6 py-4 pl-12 rounded-full border border-slate-200 dark:border-zinc-800 bg-white/85 dark:bg-zinc-900/80 backdrop-blur-xs text-sm text-slate-800 dark:text-zinc-200 focus:outline-hidden focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 shadow-xs"
           />
-          <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
-            search
-          </span>
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400" />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 cursor-pointer"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-650 cursor-pointer flex items-center justify-center"
             >
-              <span className="material-symbols-outlined text-sm">close</span>
+              <X className="w-4 h-4" />
             </button>
           )}
         </div>
@@ -139,7 +138,7 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
                 className={`px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap snap-clamp transition-all duration-150 cursor-pointer flex items-center gap-1 ${
                   isActive
                     ? "bg-orange-500 text-white shadow-md shadow-orange-500/20 border border-orange-500"
-                    : "bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-zinc-400 hover:border-orange-400"
+                    : "bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 text-slate-650 dark:text-zinc-400 hover:border-orange-400"
                 }`}
               >
                 {isTop3 && <span>🔥</span>}
@@ -192,7 +191,7 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
                   )}
                   <div className="flex-1">
                     <h4 className="font-bold text-slate-900 dark:text-zinc-100">{novel.title}</h4>
-                    <p className="text-xs text-slate-500 dark:text-zinc-550 mt-1">Tác giả: {novel.author}</p>
+                    <p className="text-xs text-slate-500 dark:text-zinc-500 mt-1">Tác giả: {novel.author}</p>
                     <div className="flex flex-wrap gap-1.5 mt-2">
                       {novel.genres?.map((g) => (
                         <span key={g} className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400 font-medium">
@@ -219,7 +218,7 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
           {/* Cột 1: Truyện mới cập nhật */}
           <div className="bg-card border border-card-border rounded-3xl p-6 space-y-4" data-testid="bento-new-novels">
             <h3 className="font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
-              <span className="material-symbols-outlined text-orange-500">update</span>
+              <span>🕒</span>
               Mới cập nhật
             </h3>
             <div className="space-y-3">
@@ -246,7 +245,7 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
           {/* Cột 2: Bảng xếp hạng thịnh hành */}
           <div className="bg-card border border-card-border rounded-3xl p-6 space-y-4">
             <h3 className="font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
-              <span className="material-symbols-outlined text-orange-500">trending_up</span>
+              <span>📈</span>
               Thịnh hành
             </h3>
             <div className="space-y-3">
@@ -262,7 +261,7 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
                       {novel.title}
                     </div>
                     <div className="text-[10px] text-slate-400 dark:text-zinc-500 flex items-center gap-1">
-                      <span className="material-symbols-outlined !text-[10px] text-orange-500">star</span>
+                      <span>⭐</span>
                       {novel.stats?.rating || 9.0} • {novel.author}
                     </div>
                   </div>
@@ -277,7 +276,7 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
             {mounted && readingHistory.length > 0 && (
               <div className="bg-card border border-card-border rounded-3xl p-6 space-y-4">
                 <h3 className="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
-                  <span className="material-symbols-outlined text-orange-500">history</span>
+                  <span>📜</span>
                   Đọc gần đây
                 </h3>
                 <div className="space-y-2">
@@ -317,3 +316,4 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
     </div>
   );
 }
+
