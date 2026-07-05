@@ -2,36 +2,27 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
 
 interface Props {
   novelSlug: string;
   onFontSizeChange: (size: number) => void;
   onThemeChange: (theme: "light" | "sepia" | "dark") => void;
+  fontFamily: "serif" | "sans";
+  onFontFamilyChange: (font: "serif" | "sans") => void;
 }
 
 export default function FloatingReaderToolbar({
   novelSlug,
   onFontSizeChange,
   onThemeChange,
+  fontFamily,
+  onFontFamilyChange,
 }: Props) {
   const [fontSize, setFontSize] = useState(20);
-  const [theme, setTheme] = useState<"light" | "sepia" | "dark">("sepia");
+  const { theme, setTheme } = useTheme();
   const [isVisible, setIsVisible] = useState(true);
   const router = useRouter();
-
-  const applyThemeClass = (targetTheme: "light" | "sepia" | "dark") => {
-    const root = document.documentElement;
-    const body = document.body;
-
-    root.classList.remove("dark");
-    body.classList.remove("sepia-mode");
-
-    if (targetTheme === "dark") {
-      root.classList.add("dark");
-    } else if (targetTheme === "sepia") {
-      body.classList.add("sepia-mode");
-    }
-  };
 
   // Load config from Local Storage on mount
   useEffect(() => {
@@ -39,22 +30,13 @@ export default function FloatingReaderToolbar({
       try {
         const config = localStorage.getItem("bukanovel-reader-config");
         if (config) {
-          const { fontSize: savedSize, theme: savedTheme } = JSON.parse(config);
+          const { fontSize: savedSize, fontFamily: savedFont } = JSON.parse(config);
           if (savedSize) {
             setFontSize(savedSize);
             onFontSizeChange(savedSize);
           }
-          if (savedTheme) {
-            setTheme(savedTheme);
-            onThemeChange(savedTheme);
-            applyThemeClass(savedTheme);
-          }
-        } else {
-          // Fallback to system dark mode preference
-          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            setTheme("dark");
-            onThemeChange("dark");
-            applyThemeClass("dark");
+          if (savedFont) {
+            onFontFamilyChange(savedFont);
           }
         }
       } catch (e) {
@@ -62,7 +44,7 @@ export default function FloatingReaderToolbar({
       }
     }, 0);
     return () => clearTimeout(timer);
-  }, [onFontSizeChange, onThemeChange]);
+  }, [onFontSizeChange, onFontFamilyChange]);
 
   // Scroll handler to hide/show toolbar
   useEffect(() => {
@@ -80,13 +62,11 @@ export default function FloatingReaderToolbar({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-
-  const updateConfig = (newSize: number, newTheme: "light" | "sepia" | "dark") => {
+  const updateConfig = (newSize: number, newFont: "serif" | "sans") => {
     try {
       localStorage.setItem(
         "bukanovel-reader-config",
-        JSON.stringify({ fontSize: newSize, theme: newTheme })
+        JSON.stringify({ fontSize: newSize, fontFamily: newFont })
       );
     } catch (e) {
       console.error("Failed to write to local storage", e);
@@ -97,14 +77,18 @@ export default function FloatingReaderToolbar({
     const nextSize = Math.min(Math.max(fontSize + delta, 14), 32);
     setFontSize(nextSize);
     onFontSizeChange(nextSize);
-    updateConfig(nextSize, theme);
+    updateConfig(nextSize, fontFamily);
   };
 
   const changeTheme = (nextTheme: "light" | "sepia" | "dark") => {
     setTheme(nextTheme);
     onThemeChange(nextTheme);
-    applyThemeClass(nextTheme);
-    updateConfig(fontSize, nextTheme);
+  };
+
+  const toggleFont = () => {
+    const nextFont = fontFamily === "serif" ? "sans" : "serif";
+    onFontFamilyChange(nextFont);
+    updateConfig(fontSize, nextFont);
   };
 
   return (
@@ -143,6 +127,20 @@ export default function FloatingReaderToolbar({
             title="Tăng cỡ chữ"
           >
             <span className="material-symbols-outlined !text-[28px]">text_fields</span>
+          </button>
+        </div>
+
+        <div className="w-px h-6 bg-slate-200 dark:bg-zinc-850 mx-1"></div>
+
+        {/* Font Family Toggle */}
+        <div className="flex items-center">
+          <button
+            onClick={toggleFont}
+            className="px-3 py-1.5 text-xs font-extrabold border border-slate-200 dark:border-zinc-800 hover:border-orange-500/20 rounded-full hover:bg-orange-500/10 text-slate-700 dark:text-zinc-350 transition-all cursor-pointer flex items-center gap-1 select-none"
+            title="Đổi phông chữ"
+          >
+            <span className="material-symbols-outlined !text-[16px]">font_download</span>
+            <span>{fontFamily === "serif" ? "Có chân" : "Không chân"}</span>
           </button>
         </div>
 

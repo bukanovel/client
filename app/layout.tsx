@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Merriweather, Inter } from "next/font/google";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
 import CookieBanner from "@/components/cookie-banner";
@@ -15,6 +15,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const merriweather = Merriweather({
+  weight: ["300", "400", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["vietnamese"],
+  variable: "--font-merriweather",
+});
+
+const inter = Inter({
+  subsets: ["vietnamese"],
+  variable: "--font-inter",
+});
+
 export const metadata: Metadata = {
   title: "Bukanovel - Đọc truyện Light Novel AI trực tuyến",
   description: "Bukanovel là nền tảng đọc truyện Light Novel AI tĩnh tối giản, tối ưu trải nghiệm đọc và bảo vệ mắt.",
@@ -28,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
@@ -44,18 +56,11 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
-                  var config = localStorage.getItem('bukanovel-reader-config');
-                  if (config) {
-                    var parsed = JSON.parse(config);
-                    if (parsed.theme === 'dark') {
-                      document.documentElement.classList.add('dark');
-                    } else if (parsed.theme === 'sepia') {
-                      document.body.classList.add('sepia-mode');
-                    }
-                  } else {
-                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                      document.documentElement.classList.add('dark');
-                    }
+                  var theme = localStorage.getItem('theme');
+                  if (theme === 'dark' || theme === 'sepia') {
+                    document.documentElement.classList.add(theme);
+                  } else if (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
                   }
                 } catch (e) {}
               })();
@@ -69,6 +74,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          themes={["light", "dark", "sepia"]}
         >
           {children}
           <CookieBanner />

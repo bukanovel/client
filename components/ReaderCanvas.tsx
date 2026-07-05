@@ -22,6 +22,7 @@ export default function ReaderCanvas({
 }: Props) {
   const [fontSize, setFontSize] = useState(20);
   const [, setTheme] = useState<"light" | "sepia" | "dark">("sepia");
+  const [fontFamily, setFontFamily] = useState<"serif" | "sans">("serif");
 
   return (
     <div className="flex-1 w-full flex flex-col items-center">
@@ -29,7 +30,7 @@ export default function ReaderCanvas({
       <main className="w-full max-w-[720px] mx-auto px-4 md:px-0 pt-12 pb-32 space-y-12">
         {/* Chapter Header */}
         <div className="text-center space-y-3">
-          <p className="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-500">
+          <p className="text-xs font-bold uppercase tracking-widest text-accent">
             {novel.title}
           </p>
           <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-950 dark:text-white leading-tight">
@@ -43,23 +44,23 @@ export default function ReaderCanvas({
         </div>
 
         {/* Chapter Control Top */}
-        <div className="flex justify-between items-center py-3 border-y border-slate-200 dark:border-zinc-800 text-xs font-bold select-none">
+        <div className="flex justify-between items-center py-3 border-y border-card-border text-xs font-bold select-none">
           {prevChapter ? (
             <Link
               href={`/truyen/${novel.slug}/${prevChapter.slug}`}
-              className="px-4 py-2 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl hover:border-orange-500/20 hover:text-orange-600 dark:hover:text-orange-400 active:scale-95 duration-200 transition-all"
+              className="px-4 py-2 bg-card border border-card-border rounded-xl hover:border-accent/20 hover:text-accent active:scale-95 duration-200 transition-all"
             >
               &larr; Chương trước
             </Link>
           ) : (
-            <span className="text-slate-300 dark:text-zinc-700 px-4 py-2">
+            <span className="text-slate-400 dark:text-zinc-500 px-4 py-2">
               &larr; Chương đầu
             </span>
           )}
 
           <Link
             href={`/truyen/${novel.slug}`}
-            className="px-4 py-2 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl hover:border-orange-500/20 hover:text-orange-600 dark:hover:text-orange-400 active:scale-95 duration-200 transition-all"
+            className="px-4 py-2 bg-card border border-card-border rounded-xl hover:border-accent/20 hover:text-accent active:scale-95 duration-200 transition-all"
           >
             Mục lục
           </Link>
@@ -67,12 +68,12 @@ export default function ReaderCanvas({
           {nextChapter ? (
             <Link
               href={`/truyen/${novel.slug}/${nextChapter.slug}`}
-              className="px-4 py-2 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl hover:border-orange-500/20 hover:text-orange-600 dark:hover:text-orange-400 active:scale-95 duration-200 transition-all"
+              className="px-4 py-2 bg-card border border-card-border rounded-xl hover:border-accent/20 hover:text-accent active:scale-95 duration-200 transition-all"
             >
               Chương sau &rarr;
             </Link>
           ) : (
-            <span className="text-slate-300 dark:text-zinc-700 px-4 py-2">
+            <span className="text-slate-400 dark:text-zinc-500 px-4 py-2">
               Hết chương &rarr;
             </span>
           )}
@@ -80,7 +81,9 @@ export default function ReaderCanvas({
 
         {/* Chapter Content Main Text */}
         <article
-          className="prose dark:prose-invert max-w-none text-slate-800 dark:text-zinc-300 leading-relaxed font-serif whitespace-pre-line py-4 select-text text-left"
+          className={`prose dark:prose-invert max-w-prose mx-auto text-foreground leading-[1.8] tracking-[0.01em] whitespace-pre-line py-4 select-text text-justify ${
+            fontFamily === "serif" ? "font-serif" : "font-sans"
+          }`}
           style={{ fontSize: `${fontSize}px` }}
         >
           {chapter.content}
@@ -92,23 +95,23 @@ export default function ReaderCanvas({
         </div>
 
         {/* Chapter Control Bottom */}
-        <div className="flex justify-between items-center py-3 border-y border-slate-200 dark:border-zinc-800 text-xs font-bold select-none">
+        <div className="flex justify-between items-center py-3 border-y border-card-border text-xs font-bold select-none">
           {prevChapter ? (
             <Link
               href={`/truyen/${novel.slug}/${prevChapter.slug}`}
-              className="px-4 py-2 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl hover:border-orange-500/20 hover:text-orange-600 dark:hover:text-orange-400 active:scale-95 duration-200 transition-all"
+              className="px-4 py-2 bg-card border border-card-border rounded-xl hover:border-accent/20 hover:text-accent active:scale-95 duration-200 transition-all"
             >
               &larr; Chương trước
             </Link>
           ) : (
-            <span className="text-slate-300 dark:text-zinc-700 px-4 py-2">
+            <span className="text-slate-400 dark:text-zinc-500 px-4 py-2">
               &larr; Chương đầu
             </span>
           )}
 
           <Link
             href={`/truyen/${novel.slug}`}
-            className="px-4 py-2 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl hover:border-orange-500/20 hover:text-orange-600 dark:hover:text-orange-400 active:scale-95 duration-200 transition-all"
+            className="px-4 py-2 bg-card border border-card-border rounded-xl hover:border-accent/20 hover:text-accent active:scale-95 duration-200 transition-all"
           >
             Mục lục
           </Link>
@@ -116,12 +119,12 @@ export default function ReaderCanvas({
           {nextChapter ? (
             <Link
               href={`/truyen/${novel.slug}/${nextChapter.slug}`}
-              className="px-4 py-2 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl hover:border-orange-500/20 hover:text-orange-600 dark:hover:text-orange-400 active:scale-95 duration-200 transition-all"
+              className="px-4 py-2 bg-card border border-card-border rounded-xl hover:border-accent/20 hover:text-accent active:scale-95 duration-200 transition-all"
             >
               Chương sau &rarr;
             </Link>
           ) : (
-            <span className="text-slate-300 dark:text-zinc-700 px-4 py-2">
+            <span className="text-slate-400 dark:text-zinc-500 px-4 py-2">
               Hết chương &rarr;
             </span>
           )}
@@ -136,6 +139,8 @@ export default function ReaderCanvas({
         novelSlug={novel.slug}
         onFontSizeChange={(size) => setFontSize(size)}
         onThemeChange={(th) => setTheme(th)}
+        fontFamily={fontFamily}
+        onFontFamilyChange={(font) => setFontFamily(font)}
       />
     </div>
   );

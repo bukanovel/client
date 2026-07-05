@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function NovelsCatalogPage() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 flex flex-col justify-between transition-colors duration-200">
+    <div className="min-h-screen bg-background text-foreground flex flex-col justify-between transition-colors duration-200">
       <Header />
 
       <main className="max-w-4xl mx-auto px-6 py-12 flex-1 w-full space-y-8">
