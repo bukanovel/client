@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Kẻ Sáng Tạo Thế Giới Ảo",
+    "slug": "ke-sang-tao-the-gioi-ao",
+    "author": "AI Writer",
+    "synopsis": "Một lập trình viên trẻ vô tình phát hiện ra dòng code bí ẩn có khả năng thay đổi thế giới thực. Nhưng liệu anh ta đang làm chủ công nghệ hay chỉ là con cờ trong một trò chơi quy mô vũ trụ?",
+    "chapters": [
+      {
+        "id": "1",
+        "title": "Chương 1: Dòng code lúc nửa đêm",
+        "slug": "chuong-1-dong-code-luc-nua-dem",
+        "content": "Gió rít qua khe cửa sổ của căn hộ nhỏ trên tầng 15. Lâm nhìn chằm chằm vào màn hình máy tính đang nhấp nháy dòng chữ màu xanh lục. Anh đã ngồi code liên tục suốt 14 tiếng đồng hồ, đầu óc đã bắt đầu mệt mỏi và mơ hồ.\n\nNhưng có một đoạn script lạ lùng xuất hiện trong repository của anh mà anh không hề nhớ mình đã viết. Nó không thuộc về bất kỳ thư viện phổ biến nào, cấu trúc logic của nó kỳ lạ đến mức như được viết bởi một thực thể ngoài hành tinh.\n\nLâm đưa tay lên bàn phím, ngón tay run rẩy gõ dòng lệnh thực thi. Bùm! Một tiếng nổ nhỏ vang lên trong đầu anh, toàn bộ không gian xung quanh bắt đầu biến đổi..."
+      },
+      {
+        "id": "2",
+        "title": "Chương 2: Hiện thực bị bẻ cong",
+        "slug": "chuong-2-hien-thuc-bi-be-cong",
+        "content": "Khi Lâm mở mắt ra, anh nhận ra mình không còn ở trong căn phòng quen thuộc nữa. Bàn làm việc bằng gỗ đã biến thành một bề mặt kim loại sáng bóng chứa đầy những ký tự ma thuật kỳ lạ phát sáng.\n\nKhông khí xung quanh nồng nặc mùi ozone. Anh nhìn qua ô cửa kính lớn trước mặt, thay vì đường phố Hà Nội ồn ào xa lộ quen thuộc, bên ngoài là một khoảng không vô tận với các luồng sáng đa sắc màu chảy xiết như những dòng sông dữ liệu.\n\n'Chào mừng người sáng tạo số 07.' Một giọng nói vang lên từ phía sau, đều đều và vô hồn..."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Nhịp Điệu Của Tương Lai",
+    "slug": "nhip-dieu-cua-tuong-lai",
+    "author": "AI Writer",
+    "synopsis": "Trong thế giới nơi âm nhạc được tạo ra hoàn toàn bởi thuật toán AI siêu việt, một nhóm nhạc sĩ tự do đi tìm lại âm điệu thô mộc của con người.",
+    "chapters": [
+      {
+        "id": "1",
+        "title": "Chương 1: Tiếng đàn câm lặng",
+        "slug": "chuong-1-tieng-dan-cam-lang",
+        "content": "Ở thành phố Neo-Hanoi của năm 2090, không còn ai chơi nhạc cụ nữa. Các thuật toán AI của tập đoàn SoundSphere có khả năng dự đoán chính xác đến 99.9% tần số âm thanh nào sẽ kích thích lượng dopamine tối đa trong não bộ người nghe để tự động sản xuất hàng triệu bài hát mỗi giây.\n\nNhưng Khánh vẫn giữ cây guitar acoustic cũ kỹ của ông nội để lại dưới gầm giường. Cây đàn đã mất một dây, lớp gỗ mục nát, nhưng mỗi khi anh gảy lên một nốt nhạc, nó mang lại một cảm xúc kỳ lạ, không hoàn hảo nhưng sống động..."
+      }
+    ]
+  }
+]

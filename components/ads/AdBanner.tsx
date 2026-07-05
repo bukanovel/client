@@ -4,26 +4,26 @@ import React, { useState, useEffect } from "react";
 
 const MOCK_ADS = [
   {
-    title: "Đột Phá IELTS 7.5 Cùng AI Tutor",
-    description: "Nhận giáo trình luyện nói phản xạ 1-1 miễn phí tối ưu cho người bận rộn.",
-    cta: "Thử Ngay Lên Trình",
+    title: "Đọc Truyện Không Giới Hạn Cùng AI Novelist",
+    description: "Khám phá hàng ngàn thế giới truyện dị giới, đô thị được sáng tác độc bản bởi AI thế hệ mới.",
+    cta: "Khám phá ngay",
     tag: "Tài trợ",
     gradient: "from-orange-500/10 via-red-500/5 to-transparent",
     border: "border-orange-500/20"
   },
   {
-    title: "Sổ Tay 1000 Từ Vựng TOEIC Cực Dễ",
-    description: "E-book độc quyền tổng hợp từ Mistake Bank của hơn 10,000 học viên tại EnStudey.",
-    cta: "Tải E-book Free",
+    title: "Tự Sáng Tác Light Novel Của Riêng Bạn",
+    description: "Nhận hướng dẫn xây dựng Prompt viết truyện ngắn có nhịp độ cực cuốn từ Bukanovel.",
+    cta: "Xem cẩm nang",
     tag: "Đề xuất",
     gradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
     border: "border-emerald-500/20"
   },
   {
-    title: "Mở Khóa Premium - Học Không Giới Hạn",
-    description: "Nâng cấp tài khoản để làm Mini-test không giới hạn và nhận dự báo đề tủ TOEIC/IELTS.",
-    cta: "Nâng Cấp Premium",
-    tag: "EnStudey Pro",
+    title: "Mua Trà Sữa Tiếp Sức Admin",
+    description: "Ủng hộ server Bukanovel hoạt động miễn phí bằng cách donate ly trà sữa nhỏ nha.",
+    cta: "Ủng hộ admin ☕",
+    tag: "Bukanovel",
     gradient: "from-indigo-500/10 via-purple-500/5 to-transparent",
     border: "border-indigo-500/20"
   }
@@ -33,7 +33,6 @@ export default function AdBanner() {
   const [adIndex, setAdIndex] = useState(0);
 
   useEffect(() => {
-    // Pick a random mock ad on mount
     const timer = setTimeout(() => {
       setAdIndex(Math.floor(Math.random() * MOCK_ADS.length));
     }, 0);
@@ -55,7 +54,7 @@ export default function AdBanner() {
 
       <div className="space-y-2 mt-2">
         <span className="text-xs font-bold text-orange-600 dark:text-orange-500 uppercase tracking-wider">
-          Quảng cáo được đề xuất
+          Quảng cáo liên kết
         </span>
         <h3 className="text-xl font-extrabold text-slate-900 dark:text-white leading-snug">
           {ad.title}
@@ -66,7 +65,7 @@ export default function AdBanner() {
       </div>
 
       <div className="pt-4 flex justify-between items-center border-t border-slate-100 dark:border-zinc-800/80">
-        <span className="text-xs text-slate-400 dark:text-zinc-500">enstudey.com/ads</span>
+        <span className="text-xs text-slate-400 dark:text-zinc-500">bukanovel.com/ads</span>
         <button className="bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition duration-200 cursor-pointer">
           {ad.cta}
         </button>

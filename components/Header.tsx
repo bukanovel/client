@@ -95,17 +95,11 @@ export default function Header({ isStatic = false }: HeaderProps) {
         <nav className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/" className="font-bold text-2xl text-slate-950 dark:text-white tracking-tight" data-testid="link-logo">
-              EnStudy
+              Bukanovel
             </Link>
             <div className="hidden md:flex gap-6">
-              <Link href="/tin-tuc" className={getLinkClass("/tin-tuc")} data-testid="link-news">
-                Tin tức học thuật
-              </Link>
-              <Link href="/tinh-diem-tot-nghiep" className={getLinkClass("/tinh-diem-tot-nghiep")} data-testid="link-calc">
-                Công cụ tính điểm
-              </Link>
-              <Link href="/tra-cuu-tuyen-sinh" className={getLinkClass("/tra-cuu-tuyen-sinh")} data-testid="link-univ">
-                Tra cứu trường đại học
+              <Link href="/truyen" className={getLinkClass("/truyen")} data-testid="link-novels">
+                Danh sách truyện
               </Link>
             </div>
           </div>

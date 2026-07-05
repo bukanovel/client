@@ -59,10 +59,10 @@ export default function DonateSection() {
         {/* Thư ngỏ */}
         <div className="flex-1 space-y-3">
           <h2 className="text-lg font-bold text-slate-950 dark:text-white flex items-center gap-2">
-            Tiếp sức cho EnStudey ☕🚀
+            Tiếp sức cho Bukanovel ☕🚀
           </h2>
           <p className="text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
-            Toàn bộ tính năng trên EnStudey được xây dựng và duy trì hoàn toàn miễn phí. Nếu công cụ này giúp bạn tiết kiệm thời gian hoặc gỡ rối mùa thi, bạn có thể &quot;tiếp sức&quot; cho mình một ly trà sữa qua mã QR bên cạnh nha! Mọi sự ủng hộ sẽ được nạp thẳng vào quỹ duy trì máy chủ để trang web tiếp tục hoạt động miễn phí cho các thế hệ sau. Cảm ơn bạn rất nhiều! ✨
+            Toàn bộ các tác phẩm trên Bukanovel được sáng tác tự động bằng AI và duy trì hoàn toàn miễn phí cho độc giả. Nếu trang web này mang đến cho bạn những phút giây thư giãn, hãy &quot;tiếp sức&quot; cho mình một ly trà sữa qua mã QR bên cạnh nha! Mọi sự ủng hộ sẽ được dùng để duy trì chi phí server để trang web tiếp tục hoạt động miễn phí. Cảm ơn bạn rất nhiều! ✨
           </p>
 
           {/* Hộp thông tin chuyển khoản */}
@@ -114,7 +114,7 @@ export default function DonateSection() {
         <div className="space-y-3" data-testid="donor-board">
           <div className="flex justify-between items-center">
             <h3 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-              Những trạm sạc năng lượng của EnStudey 🔋✨
+              Những trạm sạc năng lượng của Bukanovel 🔋✨
             </h3>
             {/* 2 nút cuộn trái / phải */}
             <div className="flex gap-1.5">
