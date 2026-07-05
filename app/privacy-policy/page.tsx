@@ -1,14 +1,5 @@
-import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-export const metadata: Metadata = {
-  title: "Chính sách bảo mật - Bukanovel",
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
 
 export default function PrivacyPolicyPage() {
   return (
@@ -21,77 +12,82 @@ export default function PrivacyPolicyPage() {
         <h1 className="text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight">
           Chính sách bảo mật thông tin – Bukanovel
         </h1>
-        <p className="text-xs text-slate-400 dark:text-zinc-500 font-semibold">Cập nhật lần cuối: Ngày 05 tháng 07 năm 2026</p>
+        <p className="text-xs text-slate-400 dark:text-zinc-500 font-semibold">
+          Cập nhật lần cuối: Ngày 05 tháng 07 năm 2026
+        </p>
 
         <div className="prose dark:prose-invert space-y-6 text-sm text-slate-700 dark:text-zinc-350 leading-relaxed font-medium">
           <p>
-            Chào bạn nha! Cảm ơn bạn đã lựa chọn <strong>Bukanovel</strong> làm nơi đọc truyện thư giãn.
-          </p>
-          <p>
-            Vì Bukanovel ở phiên bản hiện tại hoạt động hoàn toàn miễn phí và không yêu cầu bạn phải tạo tài khoản đăng nhập, nên việc bảo mật thông tin của bạn cực kỳ đơn giản và an toàn. Tuy nhiên, để hệ thống chạy mượt mà và duy trì được nền tảng, tụi mình có áp dụng một vài chính sách nhỏ liên quan đến dữ liệu hệ thống. Bạn dành chút thời gian đọc cùng chúng mình nghen!
+            Chào bạn nha! Cảm ơn bạn đã lựa chọn <strong>Bukanovel</strong> làm nơi đọc truyện thư giãn. 
+            Để bạn hoàn toàn yên tâm trải nghiệm, tụi mình xin tuyên bố rõ ràng và minh bạch các cam kết bảo mật dữ liệu dựa trên quy định pháp luật Việt Nam hiện hành và chính sách đối tác của Google.
           </p>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-bold text-slate-950 dark:text-white">1. Tụi mình &quot;thu thập&quot; những thông tin gì?</h2>
-            <p>Thật ra là... hầu như không có gì mang tính cá nhân cả! ✨</p>
-            <p>Ở phiên bản này, Bukanovel chỉ có tính năng đọc truyện Light Novel tĩnh.</p>
+            <h2 className="text-lg font-bold text-slate-950 dark:text-white">1. Cam kết &quot;Zero-Data&quot; từ phía Bukanovel</h2>
+            <p>
+              Bukanovel vận hành theo triết lý tối giản hoàn toàn nhằm mang lại tốc độ tải trang nhanh nhất:
+            </p>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                <strong>Dữ liệu đọc truyện:</strong> Mọi thông tin (chương đang đọc, cấu hình giao diện) được xử lý ngay lập tức trên trình duyệt của bạn qua bộ nhớ `localStorage`. Tụi mình KHÔNG lưu trữ thông tin này về máy chủ (server) của Bukanovel.
+                <strong>Không đăng nhập / đăng ký:</strong> Hệ thống không thiết lập bất kỳ tính năng tạo tài khoản nào. Bạn không cần cung cấp Họ tên, Email, Số điện thoại hay bất kỳ thông tin cá nhân nào để đọc truyện.
               </li>
               <li>
-                <strong>Dữ liệu hệ thống (Cookies):</strong> Để trang web load nhanh hơn cho những lần truy cập sau và phục vụ cho việc hiển thị quảng cáo, hệ thống sẽ tự động lưu lại một tệp dữ liệu ẩn danh rất nhỏ gọi là Cookie trên trình duyệt của bạn.
+                <strong>Không lưu vết máy chủ:</strong> Website không sử dụng cơ sở dữ liệu (Database) để theo dõi hành vi hay lưu trữ lịch sử đọc truyện của bạn trên hệ thống backend.
+              </li>
+              <li>
+                <strong>Lịch sử đọc local:</strong> Toàn bộ tủ truyện hoặc chương truyện bạn đang đọc dở chỉ được lưu tạm thời trên chính trình duyệt điện thoại/máy tính của bạn (qua LocalStorage). Bạn có thể xóa bỏ hoàn toàn dữ liệu này bất cứ lúc nào bằng cách xóa lịch sử duyệt web.
               </li>
             </ul>
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-bold text-slate-950 dark:text-white">2. Lời hứa bảo mật từ Bukanovel</h2>
+            <h2 className="text-lg font-bold text-slate-950 dark:text-white">2. Tuân thủ Luật Quảng cáo Việt Nam 2026</h2>
             <p>
-              Vì tụi mình không yêu cầu bạn điền họ tên, số điện thoại hay email đăng nhập, nên bạn có thể hoàn toàn yên tâm &quot;lướt&quot; web một cách ẩn danh. Tụi mình cam kết:
-            </p>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Không có bất kỳ dữ liệu cá nhân nào của bạn bị thu thập lén lút.</li>
-              <li>Tuyệt đối không có hành vi mua bán hay trao đổi thông tin người dùng cho bất kỳ bên thứ ba nào khác.</li>
-            </ul>
-          </section>
-
-          <section className="space-y-2">
-            <h2 className="text-lg font-bold text-slate-950 dark:text-white">3. LƯU Ý QUAN TRỌNG VỀ QUẢNG CÁO (Google AdSense) 🍪</h2>
-            <p>
-              Để Bukanovel có kinh phí duy trì server 24/7 và luôn mở cửa miễn phí cho tất cả độc giả, trang web có sử dụng hệ thống quảng cáo từ đối tác <strong>Google AdSense</strong>. Đây là quy định chung từ phía Google mà bạn cần lưu ý nha:
+              Bukanovel có tích hợp hiển thị quảng cáo để duy trì chi phí số hóa nội dung số. Đối với hệ thống quảng cáo trên trang, tụi mình cam kết tuân thủ nghiêm ngặt quy định mới:
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                Các nhà cung cấp bên thứ ba, bao gồm cả Google, sẽ sử dụng <strong>Cookie</strong> để phân phát các quảng cáo phù hợp dựa trên các lượt truy cập trước đó của bạn vào Bukanovel hoặc các trang web khác trên Internet.
+                <strong>Tắt quảng cáo một chạm:</strong> Toàn bộ các khối quảng cáo (bao gồm cả quảng cáo chuyển tiếp Interstitial Ads giữa các chương) luôn hiển thị rõ ràng nút đóng (X) hoặc nút bỏ qua ngay lập tức, cho phép bạn tắt quảng cáo chỉ với một lần chạm duy nhất mà không phải chờ đợi ép buộc.
               </li>
               <li>
-                Việc Google và các đối tác của họ sử dụng Cookie quảng cáo cho phép họ hiển thị những quảng cáo có liên quan và hữu ích nhất đến bạn.
-              </li>
-              <li>
-                Tụi mình cam kết tuân thủ nghiêm ngặt các quy định về bảo vệ dữ liệu cá nhân theo <strong>Nghị định 13/NĐ-CP</strong> của Chính phủ Việt Nam đối với mọi hoạt động xử lý dữ liệu liên quan.
-              </li>
-              <li>
-                Bạn hoàn toàn có quyền chủ động <strong>từ chối</strong> việc sử dụng Cookie cho quảng cáo được cá nhân hóa bằng cách truy cập vào trang <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer" className="text-orange-600 dark:text-orange-500 hover:underline">Cài đặt quảng cáo của Google</a>.
+                <strong>Bảo vệ trải nghiệm đọc:</strong> Quảng cáo không được thiết kế dạng popup che khuất nội dung chính hoặc gây cản trở thao tác chuyển chương tự nhiên của bạn.
               </li>
             </ul>
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-lg font-bold text-slate-950 dark:text-white">4. Kết nối với chúng mình</h2>
+            <h2 className="text-lg font-bold text-slate-950 dark:text-white">3. Tuyên bố về Cookie quảng cáo của Google AdSense</h2>
             <p>
-              Nếu bạn có bất kỳ câu hỏi nào về các chính sách này, hoặc vô tình thấy một quảng cáo nào đó chưa phù hợp, đừng ngại &quot;ới&quot; tụi mình ngay qua các thông tin dưới đây nha:
+              Mặc dù Bukanovel không thu thập dữ liệu của bạn, nhưng hệ thống có sử dụng dịch vụ quảng cáo liên kết <strong>Google AdSense</strong>. Theo chính sách toàn cầu của Google và quy định bảo vệ dữ liệu cá nhân (Nghị định 13/NĐ-CP):
             </p>
             <ul className="list-disc pl-5 space-y-1">
-              <li><strong>Nền tảng:</strong> Bukanovel - Trang đọc truyện Light Novel  </li>
+              <li>
+                Google và các nhà cung cấp bên thứ ba sẽ sử dụng các tệp mã nhỏ gọi là <strong>Cookie</strong> để phân phối quảng cáo dựa trên các lượt truy cập trước đó của bạn vào Bukanovel hoặc các trang web khác trên internet.
+              </li>
+              <li>
+                Việc sử dụng cookie quảng cáo của Google giúp Google và các đối tác hiển thị những nội dung quảng cáo phù hợp, có liên quan và cá nhân hóa tốt hơn đối với sở thích của bạn.
+              </li>
+              <li>
+                Bạn hoàn toàn có quyền chủ động <strong>từ chối</strong> việc sử dụng Cookie cho quảng cáo được cá nhân hóa bằng cách truy cập trực tiếp vào trang <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer" className="text-orange-600 dark:text-orange-500 hover:underline font-semibold">Trung tâm quản lý quảng cáo của Google</a>.
+              </li>
+            </ul>
+          </section>
+
+          <section className="space-y-2">
+            <h2 className="text-lg font-bold text-slate-950 dark:text-white">4. Thông tin liên hệ trách nhiệm pháp lý</h2>
+            <p>
+              Để đáp ứng tính minh bạch thông tin bắt buộc đối với Trang thông tin điện tử cá nhân tại Việt Nam, mọi vấn đề thắc mắc, phản ánh về nội dung truyện số hóa hoặc hiển thị quảng cáo, bạn vui lòng liên hệ ban quản trị qua thông tin sau:
+            </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Tên nền tảng số:</strong> Bukanovel – Không gian đọc Light Novel Tối Giản</li>
               <li><strong>Chịu trách nhiệm nội dung:</strong> Nguyễn Đức Tâm</li>
-              <li><strong>Địa chỉ:</strong> Tổ 2, Phường Cầu Giấy, TP. Hà Nội, Việt Nam</li>
-              <li><strong>Email hỗ trợ:</strong> contact@bukanovel.com</li>
+              <li><strong>Địa chỉ điều hành:</strong> Tổ 2, Phường Cầu Giấy, Quận Cầu Giấy, TP. Hà Nội, Việt Nam</li>
+              <li><strong>Email hỗ trợ vận hành:</strong> <a href="mailto:contact@bukanovel.com" className="text-orange-600 dark:text-orange-500 hover:underline">contact@bukanovel.com</a></li>
             </ul>
           </section>
 
-          <p className="font-bold text-orange-600 dark:text-orange-500 mt-6">
-            Cứ tự nhiên thư giãn cùng truyện đọc nha. Chúc bạn có những phút giây vui vẻ! 🚀
+          <p className="font-bold text-orange-600 dark:text-orange-500 mt-6 bg-orange-50 dark:bg-orange-950/30 p-4 rounded-xl text-center border border-orange-100 dark:border-orange-900/50">
+            Cứ tự nhiên thư giãn cùng những chương truyện hay nha. Chúc bạn có những phút giây vui vẻ tại Bukanovel! ☕🚀
           </p>
         </div>
       </main>
