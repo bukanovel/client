@@ -45,6 +45,21 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <head>
+        {/* Tích hợp Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         {/* Tích hợp Google AdSense Auto Ads bất đồng bộ */}
         <Script
           async

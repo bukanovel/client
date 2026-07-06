@@ -272,7 +272,7 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
           </div>
 
           {/* Cột 3: Lịch sử đọc & Quảng cáo */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* Bento Lịch sử đọc */}
             {mounted && readingHistory.length > 0 && (
               <div className="bg-card border border-card-border rounded-3xl p-6 space-y-4">

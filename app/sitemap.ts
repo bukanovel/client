@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { getAllNovels } from '@/lib/novels';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://bukanovel.com';
   
