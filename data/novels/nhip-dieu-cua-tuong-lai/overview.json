@@ -1,29 +1,141 @@
 {
-  "id": "2",
+  "id": "3",
   "title": "Nhịp Điệu Của Tương Lai",
   "slug": "nhip-dieu-cua-tuong-lai",
-  "author": "AI Songsmith",
-  "synopsis": "Trong thế giới nơi âm nhạc được tạo ra hoàn toàn bởi thuật toán AI siêu việt, một nhóm nhạc sĩ tự do đi tìm lại âm điệu thô mộc của con người.",
-  "coverUrl": "",
+  "author": "Minh Triết",
+  "synopsis": "Tác phẩm Nhịp Điệu Của Tương Lai là hành trình đầy kịch tính của các nhân vật trong một thế giới được xây dựng chi tiết. Một câu chuyện lôi cuốn người đọc ngay từ những chương đầu tiên.",
+  "coverUrl": "https://ik.imagekit.io/bukanovel/covers/cover-isekai.webp",
   "stats": {
-    "views": "850k",
-    "nominations": "3.1k",
-    "followers": "1.8k",
+    "views": "200k",
+    "nominations": "9k",
+    "followers": "1.7999999999999998k",
     "rating": 9.2
   },
   "status": "Ongoing",
   "type": "Free",
   "genres": [
-    "Drama",
     "Sci-Fi",
-    "Modern Romance"
+    "Drama",
+    "Slice of Life"
   ],
   "chapters": [
     {
       "id": "1",
-      "title": "Tiếng đàn câm lặng",
-      "slug": "chuong-1-tieng-dan-cam-lang",
+      "title": "Chương 1: Khởi đầu mới phần 1",
+      "slug": "chuong-1-khoi-dau-moi-phan-1",
       "timeAgo": "1 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "2",
+      "title": "Chương 2: Khởi đầu mới phần 2",
+      "slug": "chuong-2-khoi-dau-moi-phan-2",
+      "timeAgo": "2 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "3",
+      "title": "Chương 3: Khởi đầu mới phần 3",
+      "slug": "chuong-3-khoi-dau-moi-phan-3",
+      "timeAgo": "3 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "4",
+      "title": "Chương 4: Khởi đầu mới phần 4",
+      "slug": "chuong-4-khoi-dau-moi-phan-4",
+      "timeAgo": "4 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "5",
+      "title": "Chương 5: Khởi đầu mới phần 5",
+      "slug": "chuong-5-khoi-dau-moi-phan-5",
+      "timeAgo": "5 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "6",
+      "title": "Chương 6: Khởi đầu mới phần 6",
+      "slug": "chuong-6-khoi-dau-moi-phan-6",
+      "timeAgo": "6 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "7",
+      "title": "Chương 7: Khởi đầu mới phần 7",
+      "slug": "chuong-7-khoi-dau-moi-phan-7",
+      "timeAgo": "7 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "8",
+      "title": "Chương 8: Khởi đầu mới phần 8",
+      "slug": "chuong-8-khoi-dau-moi-phan-8",
+      "timeAgo": "8 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "9",
+      "title": "Chương 9: Khởi đầu mới phần 9",
+      "slug": "chuong-9-khoi-dau-moi-phan-9",
+      "timeAgo": "9 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "10",
+      "title": "Chương 10: Khởi đầu mới phần 10",
+      "slug": "chuong-10-khoi-dau-moi-phan-10",
+      "timeAgo": "10 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "11",
+      "title": "Chương 11: Khởi đầu mới phần 11",
+      "slug": "chuong-11-khoi-dau-moi-phan-11",
+      "timeAgo": "11 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "12",
+      "title": "Chương 12: Khởi đầu mới phần 12",
+      "slug": "chuong-12-khoi-dau-moi-phan-12",
+      "timeAgo": "12 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "13",
+      "title": "Chương 13: Khởi đầu mới phần 13",
+      "slug": "chuong-13-khoi-dau-moi-phan-13",
+      "timeAgo": "13 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "14",
+      "title": "Chương 14: Khởi đầu mới phần 14",
+      "slug": "chuong-14-khoi-dau-moi-phan-14",
+      "timeAgo": "14 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "15",
+      "title": "Chương 15: Khởi đầu mới phần 15",
+      "slug": "chuong-15-khoi-dau-moi-phan-15",
+      "timeAgo": "15 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "16",
+      "title": "Chương 16: Khởi đầu mới phần 16",
+      "slug": "chuong-16-khoi-dau-moi-phan-16",
+      "timeAgo": "16 ngày trước",
+      "isLocked": false
+    },
+    {
+      "id": "17",
+      "title": "Chương 17: Khởi đầu mới phần 17",
+      "slug": "chuong-17-khoi-dau-moi-phan-17",
+      "timeAgo": "17 ngày trước",
       "isLocked": false
     }
   ]

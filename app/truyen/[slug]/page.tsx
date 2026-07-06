@@ -52,6 +52,7 @@ export default async function NovelDetailPage({ params }: Props) {
                 alt={novel.title}
                 fill
                 priority
+                unoptimized={true}
                 className="object-cover scale-110 blur-3xl opacity-40 dark:opacity-20"
               />
             ) : (
@@ -69,6 +70,7 @@ export default async function NovelDetailPage({ params }: Props) {
                     src={novel.coverUrl}
                     alt={novel.title}
                     fill
+                    unoptimized={true}
                     sizes="(max-w-768px) 160px, 224px"
                     className="object-cover"
                   />

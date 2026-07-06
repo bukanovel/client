@@ -180,6 +180,7 @@ export default function HomepageBento({ initialNovels }: HomepageBentoProps) {
                         src={novel.coverUrl}
                         alt={novel.title}
                         fill
+                        unoptimized={true}
                         sizes="48px"
                         className="object-cover"
                       />
